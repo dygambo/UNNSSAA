@@ -53,14 +53,15 @@ If using PowerShell zip, remove `node_modules` and `.git` first (or package from
 3. Set:
 	 - Node version: 20.x (or latest supported LTS)
 	 - Application root: folder where project is extracted
-	 - Startup file: `src/server.js`
+	 - Startup file: `server/server.js`
 4. Upload and extract `unnssaa-hostinger.zip` into the app root.
 5. Open Terminal in hPanel (or SSH if enabled), then run:
 
 ```bash
 npm ci --omit=dev
-npm run prisma:generate
-npm run prisma:deploy
+npm --prefix server ci --omit=dev
+npm --prefix server run db:generate
+npm --prefix server run db:deploy
 ```
 
 6. Add environment variables in Node.js app settings (same keys as `.env.example`).
@@ -69,7 +70,7 @@ npm run prisma:deploy
 Optional first-time bootstrap data:
 
 ```bash
-npm run prisma:seed
+npm --prefix server run db:seed
 ```
 
 Run seed once only in production.

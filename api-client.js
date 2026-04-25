@@ -1,7 +1,17 @@
 (function () {
   "use strict";
 
-  var API_BASE = "/api";
+  function resolveApiBase() {
+    var configured =
+      (window.UNNSSAAConfig && window.UNNSSAAConfig.apiBaseUrl) ||
+      window.UNNSSAA_API_BASE_URL ||
+      window.__UNNSSAA_API_BASE_URL__ ||
+      "/api";
+
+    return String(configured).replace(/\/$/, "");
+  }
+
+  var API_BASE = resolveApiBase();
   var isRefreshing = false;
   var refreshPromise = null;
 
@@ -143,6 +153,9 @@
     login: login,
     logout: logout,
     setAuthSession: setAuthSession,
-    clearAuthSession: clearAuthSession
+    clearAuthSession: clearAuthSession,
+    setBaseUrl: function (baseUrl) {
+      API_BASE = String(baseUrl || "/api").replace(/\/$/, "");
+    }
   };
 })();
