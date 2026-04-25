@@ -113,18 +113,6 @@
   }
 
   async function login(email, password) {
-    // Mock login for frontend testing without a backend
-    if (email === "test@unnssaa.org" && password === "TestUser2026!") {
-      var mockMember = { accessToken: "mock_token", refreshToken: "mock_refresh", user: { id: "1", email: email, fullName: "Test User", role: "MEMBER" } };
-      setAuthSession(mockMember);
-      return mockMember;
-    }
-    if (email === "admin@unnssaa.org" && password === "Admin2026!") {
-      var mockAdmin = { accessToken: "mock_token", refreshToken: "mock_refresh", user: { id: "2", email: email, fullName: "Admin User", role: "SUPERADMIN" } };
-      setAuthSession(mockAdmin);
-      return mockAdmin;
-    }
-
     var result = await request("/auth/login", {
       method: "POST",
       body: { email: email, password: password }
