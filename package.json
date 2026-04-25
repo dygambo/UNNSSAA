@@ -11,7 +11,8 @@
     "prisma:deploy": "prisma migrate deploy",
     "prisma:seed": "node prisma/seed.js",
     "test": "node --test tests/**/*.test.js",
-    "claude": "npx @anthropic-ai/claude-code"
+    "claude": "npx @anthropic-ai/claude-code",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
