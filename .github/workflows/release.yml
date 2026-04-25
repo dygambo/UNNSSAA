@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "24"
           cache: "npm"
 
       - name: Install dependencies
@@ -35,7 +35,7 @@ jobs:
           tar -czf dist/unnssaa-release.tar.gz --exclude=node_modules --exclude=.git .
 
       - name: Upload release artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: unnssaa-release-bundle
           path: dist/unnssaa-release.tar.gz
