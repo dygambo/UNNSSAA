@@ -259,6 +259,10 @@
 
   function wireTopButtons() {
     document.querySelectorAll("button").forEach(function (btn) {
+      if (btn.closest("form") || String(btn.type || "").toLowerCase() === "submit") {
+        return;
+      }
+
       var label = textOf(btn).toLowerCase();
       if (!label) return;
 
