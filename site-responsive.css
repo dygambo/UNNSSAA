@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+svg,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+body > nav.fixed > div,
+body > nav > div {
+  width: min(100%, 80rem);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+body > main,
+body > header,
+body > section,
+body > footer {
+  width: 100%;
+  max-width: 100%;
+}
+
+body > div.ml-72,
+body > div.ml-80 {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  body > div.ml-72,
+  body > div.ml-80 {
+    margin-left: 0 !important;
+  }
+
+  body > div.ml-72 > header > div,
+  body > div.ml-80 > header > div {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  body > aside {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  body > div.ml-72 > main,
+  body > div.ml-80 > main {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body > nav.fixed > div,
+  body > nav > div {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  body > nav .hidden.md\:flex {
+    display: none !important;
+  }
+
+  body > main,
+  body > header,
+  body > section,
+  body > footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  body main > section,
+  body main > header,
+  body main > .grid,
+  body main > .flex {
+    width: 100%;
+  }
+
+  body main h1,
+  body main h2,
+  body main h3 {
+    text-wrap: balance;
+  }
+
+  body main h1 {
+    font-size: clamp(2.25rem, 10vw, 4rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  body main h2 {
+    font-size: clamp(1.75rem, 7vw, 2.75rem) !important;
+  }
+
+  body main .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main .flex {
+    flex-wrap: wrap;
+  }
+
+  body main .gap-8,
+  body main .gap-12,
+  body main .gap-16 {
+    gap: 1.25rem !important;
+  }
+
+  body main .p-8,
+  body main .p-10,
+  body main .p-12,
+  body main .py-20,
+  body main .py-24,
+  body main .py-32 {
+    padding: 1rem !important;
+  }
+
+  body main .px-8,
+  body main .px-10,
+  body main .px-12 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  body main .text-5xl,
+  body main .text-6xl,
+  body main .text-7xl,
+  body main .text-\[3\.5rem\],
+  body main .text-\[4rem\] {
+    font-size: clamp(2.25rem, 8vw, 3.5rem) !important;
+  }
+
+  body main .h-\[500px\],
+  body main .min-h-\[90vh\] {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  body main .aspect-square,
+  body main .aspect-video {
+    aspect-ratio: 16 / 10;
+  }
+
+  body > div.ml-72,
+  body > div.ml-80 {
+    margin-left: 0 !important;
+  }
+
+  body > div.ml-72 footer,
+  body > div.ml-80 footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Welcome to the UNNSSAA Mentorship Hub. Find a mentor, seek professional guidance, and connect with elite industry leaders in the alumni network.">
+<title>Mentorship Hub | UNNSSAA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="site-responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#745c00",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary": "#ffffff",
+              "primary": "#00342b",
+              "surface-bright": "#fcf9f8",
+              "surface-tint": "#29695b",
+              "secondary-fixed-dim": "#e9c349",
+              "inverse-on-surface": "#f3f0ef",
+              "tertiary-fixed-dim": "#b5c8df",
+              "primary-container": "#004d40",
+              "on-tertiary-fixed-variant": "#36485b",
+              "background": "#fcf9f8",
+              "on-secondary-fixed-variant": "#574500",
+              "tertiary-container": "#334557",
+              "secondary-fixed": "#ffe088",
+              "on-tertiary-fixed": "#091d2e",
+              "on-surface-variant": "#3f4945",
+              "on-primary-fixed": "#00201a",
+              "tertiary-fixed": "#d1e4fb",
+              "surface-container-highest": "#e5e2e1",
+              "on-tertiary-container": "#9fb2c8",
+              "outline-variant": "#bfc9c4",
+              "secondary": "#735c00",
+              "surface-dim": "#dcd9d9",
+              "on-error": "#ffffff",
+              "primary-fixed": "#afefdd",
+              "surface-container": "#f0edec",
+              "on-error-container": "#93000a",
+              "surface": "#fcf9f8",
+              "error": "#ba1a1a",
+              "outline": "#707975",
+              "inverse-surface": "#313030",
+              "on-background": "#1c1b1b",
+              "on-primary-container": "#7ebdac",
+              "on-primary-fixed-variant": "#065043",
+              "inverse-primary": "#94d3c1",
+              "on-secondary-fixed": "#241a00",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e5e2e1",
+              "surface-container-high": "#ebe7e7",
+              "tertiary": "#1c2f40",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "primary-fixed-dim": "#94d3c1",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fed65b"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-emerald-900">UNNSSAA</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-sans antialiased text-sm font-medium tracking-tight" href="home.html">Home</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-sans antialiased text-sm font-medium tracking-tight" href="about.html">About</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-sans antialiased text-sm font-medium tracking-tight" href="alumni_directory.html">Directory</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-sans antialiased text-sm font-medium tracking-tight" href="events.html">Events</a>
+<a class="text-stone-600 hover:text-emerald-800 transition-colors font-sans antialiased text-sm font-medium tracking-tight" href="news.html">Stories</a>
+<a class="text-emerald-900 border-b-2 border-amber-500 pb-1 font-sans antialiased text-sm font-medium tracking-tight" href="giveback.html">Give Back</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-600 hover:opacity-80 transition-all duration-300 ease-out font-sans antialiased text-sm font-medium tracking-tight">Login</button>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl text-sm font-bold scale-95 active:scale-90 transition-transform">Contact</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero / Career Support Intro -->
+<section class="max-w-7xl mx-auto px-8 py-20 relative overflow-hidden">
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[0.7rem] font-bold tracking-[0.15em] uppercase mb-6">
+                        Mentorship Hub
+                    </span>
+<h1 class="text-[3.5rem] font-extrabold leading-[1.1] tracking-[-0.04em] text-primary mb-8">
+                        Find Your <br/><span class="text-secondary">Guide</span>.
+                    </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-xl mb-10">
+                        Don't navigate your career alone. Connect with experienced alumni who have walked the path before you. From industry veterans to successful entrepreneurs, find the perfect mentor to help you roar.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:translate-y-[-2px] transition-all duration-300 shadow-lg shadow-primary/10">
+                            Apply to be a Mentor
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+</button>
+</div>
+</div>
+<div class="relative h-[500px] rounded-[2rem] overflow-hidden">
+<img alt="Alumni working together" class="w-full h-full object-cover" data-alt="Professional alumni working together in modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJXk0OxfVx-uOMnv5v_oTchySW6ooA458T2Dton-qsRmFomvwt7O7CUoi0bMXyiNICv1xTFmAeoG5IEEeAMWMKtU7tfszyiFSRo6jtxWaB4I3Et9QBhWyzvZ-A2X2xyYkaQbEB-OtlfvMXqHAZyBsnK4HuRzPuxN-QLK52JpXpVNRsq6NYLNUMuqZNqEfNTB53xbFaX5vLZfo2MFt1msKDGYl4EEA3sJmhHHF95lM_1Bsx5aJcMdXMFBwn_ThKxBGCyHxh_E8yPfrM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-2xl border border-white/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Global Reach</p>
+<p class="text-xs text-on-surface-variant">Connecting Lions across 45 countries.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Opportunities (Jobs & Internships) -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-[1.75rem] font-semibold tracking-[-0.01em] text-primary mb-2">Alumni Mentors</h2>
+<p class="text-on-surface-variant">Connect with Lions across diverse industries.</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary text-sm font-medium">All Disciplines</button>
+</div>
+</div>
+<!-- Mentor Directory Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="mentors-directory-grid">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-900 text-stone-400">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-bold text-white tracking-widest uppercase">UNNSSAA</div>
+<p class="text-sm leading-relaxed">© 2024 UNNSSAA. Heritage &amp; Future. Empowering the next generation of Lions through connection and opportunity.</p>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Association</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block" href="alumni_directory.html">Directory</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block" href="events.html">Events</a></li>
+<li><a class="text-white font-semibold hover:text-amber-500 transition-colors hover:translate-x-1 inline-block" href="careers.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block" href="giveback.html">Give Back</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block" href="mentors.html">Mentorship</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block" href="giveback.html#impact-areas">Scholarships</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block" href="contact.html#privacy">Privacy Policy</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block" href="contact.html#terms">Terms</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script src="app.js"></script>
+</body></html>

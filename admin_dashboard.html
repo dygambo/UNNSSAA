@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UNNSSAA Admin Portal | Heritage Modernist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="site-responsive.css" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(252, 249, 248, 0.7);
+            backdrop-filter: blur(24px);
+        }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #dcd9d9; border-radius: 10px; }
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+        .admin-view-hidden {
+            display: none !important;
+        }
+        .admin-nav-active {
+            color: #0f766e;
+            font-weight: 700;
+            border-right-width: 4px;
+            border-right-color: #0f766e;
+            background: rgba(231, 229, 228, 0.65);
+        }
+        .admin-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 60;
+            padding: 1rem;
+        }
+        .admin-modal-backdrop.active {
+            display: flex;
+        }
+        .admin-modal {
+            width: 100%;
+            max-width: 680px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
+            padding: 1.25rem;
+        }
+        .admin-field {
+            display: grid;
+            gap: 0.35rem;
+            margin-bottom: 0.85rem;
+        }
+        .admin-field label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #3f4945;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        .admin-field input,
+        .admin-field textarea,
+        .admin-field select {
+            width: 100%;
+            border: 1px solid #d8dedd;
+            border-radius: 0.7rem;
+            padding: 0.65rem 0.75rem;
+            font-size: 0.92rem;
+        }
+        .admin-field textarea {
+            min-height: 110px;
+        }
+        .break-safe {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        /* Mobile menu active state */
+        .sidebar-open {
+            transform: translateX(0) !important;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#7ebdac",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#d1e4fb",
+                        "on-secondary-container": "#745c00",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary-container": "#9fb2c8",
+                        "tertiary-container": "#334557",
+                        "surface-variant": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "on-background": "#1c1b1b",
+                        "surface-container": "#f0edec",
+                        "secondary": "#735c00",
+                        "inverse-primary": "#94d3c1",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#36485b",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-surface": "#313030",
+                        "on-secondary-fixed": "#241a00",
+                        "on-tertiary-fixed": "#091d2e",
+                        "on-surface-variant": "#3f4945",
+                        "surface-container-high": "#ebe7e7",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-tint": "#29695b",
+                        "on-primary-fixed-variant": "#065043",
+                        "outline": "#707975",
+                        "outline-variant": "#bfc9c4",
+                        "secondary-fixed": "#ffe088",
+                        "tertiary": "#1c2f40",
+                        "primary": "#00342b",
+                        "primary-fixed-dim": "#94d3c1",
+                        "on-primary-fixed": "#00201a",
+                        "primary-container": "#004d40",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-fixed": "#afefdd",
+                        "secondary-container": "#fed65b",
+                        "tertiary-fixed-dim": "#b5c8df",
+                        "surface-bright": "#fcf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface min-h-screen overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full z-50 py-8 px-6 w-72 flex flex-col border-r bg-stone-50/95 backdrop-blur-xl shadow-[20px_0_40px_rgba(28,27,27,0.03)] font-['Inter'] tracking-tight text-sm transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out" id="admin-sidebar">
+<div class="mb-10 px-2 flex justify-between items-center">
+<div>
+<h1 class="text-2xl font-extrabold tracking-tighter text-teal-950">UNNSSAA</h1>
+<p class="text-stone-500 font-medium text-xs">Admin Portal</p>
+</div>
+<button id="close-sidebar" class="lg:hidden p-2 text-stone-500 hover:bg-stone-200 rounded-lg">
+    <span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-teal-900 font-bold border-r-4 border-teal-900 bg-stone-200/50 transform transition-transform active:scale-95" href="#" id="nav-overview">
+<span class="material-symbols-outlined">dashboard</span>
+                Overview
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 hover:text-teal-900 hover:bg-stone-200/40 transition-all duration-300 ease-out transform active:scale-95" href="#" id="nav-members">
+<span class="material-symbols-outlined">group</span>
+                User Management
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 hover:text-teal-900 hover:bg-stone-200/40 transition-all duration-300 ease-out transform active:scale-95" href="#" id="nav-events">
+<span class="material-symbols-outlined">event</span>
+                Event Management
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 hover:text-teal-900 hover:bg-stone-200/40 transition-all duration-300 ease-out transform active:scale-95" href="#" id="nav-careers">
+<span class="material-symbols-outlined">work</span>
+                Career Hub
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 hover:text-teal-900 hover:bg-stone-200/40 transition-all duration-300 ease-out transform active:scale-95" href="#" id="nav-mentors">
+<span class="material-symbols-outlined">psychology</span>
+                Mentorship Hub
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 hover:text-teal-900 hover:bg-stone-200/40 transition-all duration-300 ease-out transform active:scale-95" href="#" id="nav-directory">
+<span class="material-symbols-outlined">folder_shared</span>
+                Alumni Directory
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 hover:text-teal-900 hover:bg-stone-200/40 transition-all duration-300 ease-out transform active:scale-95" href="#" id="nav-donations">
+<span class="material-symbols-outlined">payments</span>
+                Donations
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 hover:text-teal-900 hover:bg-stone-200/40 transition-all duration-300 ease-out transform active:scale-95" href="#" id="nav-compliance">
+<span class="material-symbols-outlined">gavel</span>
+                Compliance
+            </a>
+</nav>
+<div class="mt-auto">
+<button class="w-full py-4 bg-primary text-on-primary font-semibold rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 transition-all transform active:scale-95" id="admin-export-report" type="button">
+                Export Reports
+            </button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 left-0 lg:left-72 z-30 flex flex-wrap lg:flex-nowrap items-center justify-between px-4 sm:px-6 lg:px-10 py-4 min-h-[5rem] bg-stone-50/80 backdrop-blur-2xl transition-all duration-200 ease-in-out border-b lg:border-none border-stone-200 gap-4" id="admin-header">
+<div class="flex items-center gap-4">
+<button id="open-sidebar" class="lg:hidden p-2 text-stone-600 hover:bg-stone-200 rounded-lg">
+    <span class="material-symbols-outlined">menu</span>
+</button>
+<div>
+    <h2 class="text-lg md:text-xl font-bold text-teal-950 font-['Inter']" id="page-title">Admin Dashboard</h2>
+    <span class="text-stone-500 text-xs md:text-sm font-medium" id="page-subtitle">Lions Heritage Campus</span>
+</div>
+</div>
+<div class="flex items-center gap-4 lg:gap-6 flex-wrap sm:flex-nowrap w-full lg:w-auto justify-end">
+<div class="relative group flex-1 sm:flex-initial">
+<span class="absolute inset-y-0 left-3 flex items-center text-stone-400">
+<span class="material-symbols-outlined">search</span>
+</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-high border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20 w-full sm:w-64 transition-all" id="admin-global-search" placeholder="Global Search..." type="text"/>
+</div>
+<div class="flex items-center gap-1 sm:gap-2 hidden sm:flex">
+<button class="p-2 text-stone-500 hover:bg-stone-200/50 rounded-full transition-all" id="admin-refresh-snapshot" title="Refresh" type="button">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+<button class="p-2 text-stone-500 hover:bg-stone-200/50 rounded-full transition-all" id="admin-import-report" title="Import Snapshot" type="button">
+<span class="material-symbols-outlined">upload_file</span>
+</button>
+<button class="p-2 text-stone-500 hover:bg-stone-200/50 rounded-full transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+<div class="flex items-center gap-3 pl-0 sm:pl-4 sm:border-l border-outline-variant/30">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold text-on-surface">Dr. Chukwuemeka</p>
+<p class="text-xs text-stone-500">Super Administrator</p>
+</div>
+<img alt="Administrator Profile" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover ring-2 ring-primary/10" data-alt="Close-up portrait of a professional African man in a tailored suit with a confident expression and blurred office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA6B4lvlWzziMm8x_wUFSgWekDjUoA44iy9PdzGk9YzrlWBMnaf5TxWR2Yvu00UEATzwqASZGCn8CYZ0i9aA8Q-NHn9syGZHwFjNW7sLAOeVkyOaKcniv4DeZggKsQTyda3OD3xK4vuCJFOxOomgTTqpiUIS8B0skRA9PPgQ8OGZcZzv0GbTQtVwjSvwiGvXDPNU9Lsn9zmARAdjKxi2oFm-xZrKYE15fd6iugSj8hjPeK92e2Dner0MIhJBB0-5kNCrax3QupqVHQ"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-0 lg:ml-72 pt-32 lg:pt-28 pb-12 px-4 sm:px-6 lg:px-10 w-full lg:w-[calc(100%-18rem)]" id="admin-main">
+<!-- KPI Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10" id="view-kpi">
+<div class="bg-surface-container-low p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl text-primary">group</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-1">Total Members</p>
+<h3 class="text-3xl font-extrabold text-teal-950" id="admin-member-count-card">00</h3>
+<div class="mt-4 flex items-center gap-1 text-xs font-bold text-green-600">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12% this month</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl text-secondary">pending_actions</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-1">Verified Members</p>
+<h3 class="text-3xl font-extrabold text-teal-950" id="admin-verified-count-card">00</h3>
+<div class="mt-4 flex items-center gap-1 text-xs font-bold text-secondary">
+<span class="material-symbols-outlined text-sm">priority_high</span>
+<span>Action required</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl relative overflow-hidden group border-l-4 border-primary">
+<div class="absolute top-0 right-0 p-4 opacity-10 transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl text-primary">payments</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-1">Monthly Donations</p>
+<h3 class="text-3xl font-extrabold text-teal-950" id="admin-giving-total">NGN 0</h3>
+<div class="mt-4 flex items-center gap-1 text-xs font-bold text-green-600">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>94% of target met</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl text-error">report_problem</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-1">Open Reports</p>
+<h3 class="text-3xl font-extrabold text-teal-950" id="admin-open-grievances-card">00</h3>
+<div class="mt-4 flex items-center gap-1 text-xs font-bold text-error">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>2 High priority</span>
+</div>
+</div>
+</section>
+<!-- Dynamic Grid Layout -->
+<div class="grid grid-cols-12 gap-8" id="view-grid">
+<!-- Member Management Section -->
+<div class="col-span-12 lg:col-span-8 space-y-8 min-w-0" id="view-left-column">
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)]" id="view-members-card">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-2xl font-extrabold text-teal-950 tracking-tight">Member Management</h2>
+<p class="text-stone-500 text-sm">Registry of verified and pending alumni members</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 text-sm font-bold text-primary hover:bg-stone-100 rounded-lg transition-colors">View All</button>
+<button class="px-4 py-2 text-sm font-bold bg-secondary-container text-on-secondary-container rounded-lg hover:brightness-95 transition-all" data-open-modal="member" type="button">Add Member</button>
+</div>
+</div>
+<div class="overflow-x-auto w-full pb-4">
+<table class="w-full text-left min-w-[600px]">
+<thead>
+<tr class="border-b border-stone-100">
+<th class="pb-4 text-xs font-bold uppercase tracking-widest text-stone-400 px-2">Member</th>
+<th class="pb-4 text-xs font-bold uppercase tracking-widest text-stone-400 px-2">Class</th>
+<th class="pb-4 text-xs font-bold uppercase tracking-widest text-stone-400 px-2">Status</th>
+<th class="pb-4 text-xs font-bold uppercase tracking-widest text-stone-400 px-2 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-50" id="admin-member-table-body">
+</tbody>
+</table>
+</div>
+<div class="mt-4 flex items-center justify-between gap-4">
+<p class="text-xs text-stone-500" id="admin-member-pagination-meta">Page 1</p>
+<div class="inline-flex gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-member-prev" type="button">Prev</button>
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-member-next" type="button">Next</button>
+</div>
+</div>
+</section>
+<!-- Career Hub Management Section -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)] hidden admin-view-hidden" id="view-careers-card">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-2xl font-extrabold text-teal-950 tracking-tight">Career Hub</h2>
+<p class="text-stone-500 text-sm">Manage job roles, internships, and dynamic opportunities</p>
+</div>
+<button class="px-4 py-2 text-sm font-bold bg-secondary-container text-on-secondary-container rounded-lg hover:brightness-95 transition-all" data-open-modal="career" type="button">Add Role</button>
+</div>
+<div class="mb-4">
+<input class="w-full px-3 py-2 bg-surface-container-high border border-stone-200 rounded-lg text-sm focus:ring-2 focus:ring-primary/20" id="admin-career-search" placeholder="Search opportunities..." type="text"/>
+</div>
+<ul class="space-y-4" id="admin-career-list">
+</ul>
+<div class="mt-4 flex items-center justify-between gap-4">
+<p class="text-xs text-stone-500" id="admin-career-pagination-meta">Page 1</p>
+<div class="inline-flex gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-career-prev" type="button">Prev</button>
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-career-next" type="button">Next</button>
+</div>
+</div>
+</section>
+<!-- Mentorship Hub Management Section -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)] hidden admin-view-hidden" id="view-mentors-card">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-2xl font-extrabold text-teal-950 tracking-tight">Mentorship Hub</h2>
+<p class="text-stone-500 text-sm">Manage alumni mentors and mentorship tracks</p>
+</div>
+<button class="px-4 py-2 text-sm font-bold bg-secondary-container text-on-secondary-container rounded-lg hover:brightness-95 transition-all" data-open-modal="mentor" type="button">Add Mentor</button>
+</div>
+<div class="mb-4">
+<input class="w-full px-3 py-2 bg-surface-container-high border border-stone-200 rounded-lg text-sm focus:ring-2 focus:ring-primary/20" id="admin-mentor-search" placeholder="Search mentors..." type="text"/>
+</div>
+<ul class="space-y-4" id="admin-mentor-list">
+</ul>
+<div class="mt-4 flex items-center justify-between gap-4">
+<p class="text-xs text-stone-500" id="admin-mentor-pagination-meta">Page 1</p>
+<div class="inline-flex gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-mentor-prev" type="button">Prev</button>
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-mentor-next" type="button">Next</button>
+</div>
+</div>
+</section>
+<!-- Compliance & Governance Bento Panel -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6" id="view-compliance-card">
+<div class="bg-tertiary text-white p-8 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-20">
+<span class="material-symbols-outlined !text-7xl">gavel</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Compliance Hub</h3>
+<p class="text-tertiary-fixed/70 text-sm mb-6">Review legal updates and active grievance filings.</p>
+<div class="mb-4 flex flex-wrap gap-2">
+<button class="px-3 py-2 bg-white text-tertiary text-[11px] font-bold rounded-lg hover:bg-tertiary-fixed" data-open-modal="grievance" type="button">Add Grievance</button>
+<button class="px-3 py-2 bg-white/15 text-white text-[11px] font-bold rounded-lg hover:bg-white/20" data-open-modal="whistle" type="button">Add Whistle Report</button>
+</div>
+<div class="space-y-4" id="admin-grievance-list">
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-extrabold text-teal-950">Whistleblowing</h3>
+<span class="material-symbols-outlined text-secondary">security</span>
+</div>
+<p class="text-stone-500 text-sm mb-6">Secured anonymous reporting channel activities.</p>
+<div class="flex items-center gap-4 p-4 bg-white/50 rounded-xl mb-4" id="admin-whistle-list">
+</div>
+</div>
+<button class="w-full py-3 border-2 border-stone-300 text-stone-600 text-xs font-bold rounded-xl hover:bg-stone-200 transition-colors">Open Secure Vault</button>
+</div>
+</section>
+</div>
+<!-- Side Widgets (Events & Donations) -->
+<div class="col-span-12 lg:col-span-4 space-y-8 min-w-0" id="view-right-column">
+<!-- Upcoming Events Management -->
+<section class="bg-surface-container-low p-6 rounded-xl" id="view-events-card">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-extrabold text-teal-950">Upcoming Events</h3>
+<button class="p-2 bg-primary/5 text-primary rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="mb-4">
+<input class="w-full px-3 py-2 bg-white border border-stone-200 rounded-lg text-sm focus:ring-2 focus:ring-primary/20" id="admin-event-search" placeholder="Search events..." type="text"/>
+</div>
+<div class="space-y-4" id="admin-event-list">
+</div>
+<div class="mt-4 flex items-center justify-between gap-4">
+<p class="text-xs text-stone-500" id="admin-event-pagination-meta">Page 1</p>
+<div class="inline-flex gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-event-prev" type="button">Prev</button>
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-event-next" type="button">Next</button>
+</div>
+</div>
+<button class="w-full mt-6 py-3 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-xl flex items-center justify-center gap-2 hover:brightness-95 transition-all" data-open-modal="event" type="button">
+                        Create New Event
+                    </button>
+</section>
+<!-- Recent Donations Log -->
+<section class="bg-surface-container p-6 rounded-xl" id="view-donations-card">
+<h3 class="text-lg font-extrabold text-teal-950 mb-6">Recent Donations</h3>
+<div class="mb-4">
+<button class="px-3 py-2 bg-primary text-white text-[11px] font-bold rounded-lg hover:opacity-90" data-open-modal="donation" type="button">Record Donation</button>
+</div>
+<div class="mb-4">
+<input class="w-full px-3 py-2 bg-white border border-stone-200 rounded-lg text-sm focus:ring-2 focus:ring-primary/20" id="admin-donation-search" placeholder="Search donations..." type="text"/>
+</div>
+<div class="space-y-6" id="admin-donation-list">
+</div>
+<div class="mt-4 flex items-center justify-between gap-4">
+<p class="text-xs text-stone-500" id="admin-donation-pagination-meta">Page 1</p>
+<div class="inline-flex gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-donation-prev" type="button">Prev</button>
+<button class="px-3 py-1.5 rounded-lg border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-100" id="admin-donation-next" type="button">Next</button>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-stone-200">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Total Today</p>
+<p class="text-xl font-black text-primary" id="dashboard-donation-total">NGN 0</p>
+</div>
+<button class="p-2 hover:bg-stone-200 rounded-full transition-colors">
+<span class="material-symbols-outlined text-stone-500">open_in_new</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Quick Tips Card -->
+<div class="relative h-48 rounded-xl overflow-hidden group" id="view-tip-card">
+<img alt="Heritage Library" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior of a modern academic library with tall shelves of books, warm wooden textures, and soft atmospheric lighting through high windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0YkvlETaq2SUFcALAw2MXpCKo-RoOwrR3oihHN3xmMXETfXzGzZTRW5U_8gCV9ToUoseh3Mue36SCUVSDFwjRP_yGvDeNruryaAV9Dpt85kQbm-gUmuzCRegUAPjDee2LtF0P8X1JMha41iJfHux6BJ-JFuj0iV3stXgNnZRtzpgN08GQNemZbf9K4M49QDTP1zgVPvd9SDlOhyxJ9RUkJJTQaDQkrLI9qEaVO907AGkN_0ooTvC9tggHZLA1hMLQEAPRsmK8EGEm"/>
+<div class="absolute inset-0 bg-primary/80 flex flex-col justify-end p-6">
+<h4 class="text-white font-bold text-sm mb-1">Administrative Tip</h4>
+<p class="text-white/80 text-xs leading-relaxed">Ensure all donation receipts are generated and mailed within 24 hours of confirmation.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Quick Actions -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center group hover:scale-110 transition-transform active:scale-95 z-50">
+<span class="material-symbols-outlined !text-3xl">add</span>
+<div class="absolute right-16 px-4 py-2 bg-stone-900 text-white text-[10px] font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Quick Actions
+        </div>
+</button>
+<input accept="application/json,.json" id="admin-import-file" style="display:none" type="file"/>
+
+<div class="admin-modal-backdrop" id="admin-modal-backdrop">
+    <div class="admin-modal">
+        <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-extrabold text-teal-950" id="admin-modal-title">Add Record</h3>
+            <button class="p-2 rounded-lg hover:bg-stone-100" id="admin-modal-close" type="button">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <form id="admin-modal-form"></form>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+    document.getElementById('open-sidebar').addEventListener('click', () => {
+        document.getElementById('admin-sidebar').classList.add('sidebar-open');
+    });
+    document.getElementById('close-sidebar').addEventListener('click', () => {
+        document.getElementById('admin-sidebar').classList.remove('sidebar-open');
+    });
+</script>
+<script src="api-client.js"></script>
+<script src="admin-dashboard.js"></script>
+</body></html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Discover upcoming networking events, academic symposiums, and formal gatherings hosted by UNNSSAA worldwide.">
+<title>Events | UNNSSAA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="site-responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#745c00",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary": "#ffffff",
+              "primary": "#00342b",
+              "surface-bright": "#fcf9f8",
+              "surface-tint": "#29695b",
+              "secondary-fixed-dim": "#e9c349",
+              "inverse-on-surface": "#f3f0ef",
+              "tertiary-fixed-dim": "#b5c8df",
+              "primary-container": "#004d40",
+              "on-tertiary-fixed-variant": "#36485b",
+              "background": "#fcf9f8",
+              "on-secondary-fixed-variant": "#574500",
+              "tertiary-container": "#334557",
+              "secondary-fixed": "#ffe088",
+              "on-tertiary-fixed": "#091d2e",
+              "on-surface-variant": "#3f4945",
+              "on-primary-fixed": "#00201a",
+              "tertiary-fixed": "#d1e4fb",
+              "surface-container-highest": "#e5e2e1",
+              "on-tertiary-container": "#9fb2c8",
+              "outline-variant": "#bfc9c4",
+              "secondary": "#735c00",
+              "surface-dim": "#dcd9d9",
+              "on-error": "#ffffff",
+              "primary-fixed": "#afefdd",
+              "surface-container": "#f0edec",
+              "on-error-container": "#93000a",
+              "surface": "#fcf9f8",
+              "error": "#ba1a1a",
+              "outline": "#707975",
+              "inverse-surface": "#313030",
+              "on-background": "#1c1b1b",
+              "on-primary-container": "#7ebdac",
+              "on-primary-fixed-variant": "#065043",
+              "inverse-primary": "#94d3c1",
+              "on-secondary-fixed": "#241a00",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e5e2e1",
+              "surface-container-high": "#ebe7e7",
+              "tertiary": "#1c2f40",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "primary-fixed-dim": "#94d3c1",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fed65b"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300 ease-out">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-extrabold tracking-tighter text-emerald-900 dark:text-white">UNNSSAA</span>
+<div class="hidden md:flex gap-8 items-center font-sans antialiased text-sm font-medium tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 transition-colors" href="home.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 transition-colors" href="about.html">About</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 transition-colors" href="alumni_directory.html">Directory</a>
+<a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-amber-500 pb-1" href="events.html">Events</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 transition-colors" href="news.html">Stories</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 transition-colors" href="giveback.html">Give Back</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-600 font-medium text-sm hover:opacity-80 transition-all scale-95 active:scale-90">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-semibold hover:opacity-90 transition-all scale-95 active:scale-90 shadow-md">Contact</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 lg:py-32 max-w-7xl mx-auto overflow-hidden">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="label-md uppercase tracking-[0.1em] text-secondary font-bold mb-4 block">Alumni Gathering</span>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-primary tracking-tight leading-[1.1] mb-8">
+                        Connect &amp; Reconnect.
+                    </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-xl mb-10">
+                        From global reunions to niche professional webinars, our events are the heartbeat of the UNNSSAA community. Join us as we celebrate heritage and build the future together.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold shadow-lg hover:-translate-y-1 transition-transform" href="#upcoming">Explore Upcoming</a>
+<a class="bg-surface-container-highest text-primary px-8 py-4 rounded-xl font-bold hover:bg-surface-container transition-colors" href="#past">View Past Highlights</a>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-[3rem] overflow-hidden bg-primary-container relative z-10">
+<img alt="Alumni gathering event" class="w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="Elegant university alumni banquet hall gathering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdrRIl5dQIktoB0kdD6dn2IXYLpfM5e2YfSqdxRpDyHKZ2rXF80gRXD_wd5wN1P1E4J2LqnNu9Sieg1p2OEaHvo9kCVcWPStKWkUoadddwAmr0QdPz80QZXfHcDwLgwKqgNqcTUK_EBOq65VlZcMiclGw0DJ2YEe9jtp0j7NJSNztMsN32eaiGnhszP_-8OaANY9RTbfnLwu6WgxSH8uVinHlrshF-RH7SMYmhItqQB35PVgLl-uEvkVhiQW9Bc1A1GnVx0vLgVB3t"/>
+</div>
+<div class="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary-container rounded-full blur-3xl opacity-30 -z-10"></div>
+<div class="absolute -top-6 -right-6 w-64 h-64 bg-primary rounded-full blur-3xl opacity-10 -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Upcoming Events Grid -->
+<section class="px-8 py-24 bg-surface-container-low" id="upcoming">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-bold text-primary tracking-tight mb-4">Upcoming Events</h2>
+<p class="text-on-surface-variant max-w-md">Secure your spot at our most anticipated gatherings of the season.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="glass-card rounded-xl p-6 shadow-sm group hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-48 rounded-lg overflow-hidden mb-6">
+<img alt="Conference event" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern tech conference stage with lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4l3XMUfMwHcPcyqUOWWoOd5EPGtTDZj1s_-1m-M9dNVSdmynJT9YHhUC1QkPUw-0aDRoMRCi-nDB4Mdj2CHAp3KXNuu91Zjw-C-de7v7ZyRS67DbgmQSz_ElXJOL-y7eyBr_wCIo5-1j_DoQsLFixXeAtWYbEaGsjZ_MiGt2AcUbcuuDQDL-TD483yrPgMHi_nKAAUU5sj8zbZLRuCmHT9IjJCUiT8yfGuASlzRDPcSs5819JZ1T8FbEJeij67UHmFc4yuz2djuIV"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary">REUNION</div>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-sm">calendar_month</span>
+<span class="text-xs font-bold tracking-widest uppercase text-on-surface-variant">Nov 24, 2024</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">The Silver Jubilee Homecoming</h3>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">Celebrating 25 years of excellence. A weekend of memories, mentorship, and formal gala nights at the Nsukka campus.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-primary font-bold">₦15,000</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold group-hover:bg-secondary transition-colors">Register Now</button>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="glass-card rounded-xl p-6 shadow-sm group hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-48 rounded-lg overflow-hidden mb-6">
+<img alt="Webinar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a professional microphone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3K09r8NOWgtEiN570-hRlZdc-rWX2AU1zTTLWT_5RySYkoYxLQYUujBGX0dC_pobMmsEbrbaoacoEHI9XVBzCkkiCHVFxcnz_DN2WpLVflrLiA8yVphUt3-Yg1QQYvSyKtJswXaST5_jlJCtYe0graNlZFnxAYKKJPJrO8qMMxWooZSNlhAQeFXiOsNg-x4NOI8nQh8WHZTilFVxzq87S7hqV8RlpXkm8JFNK1Q-hJTu1y0IdjOgIneCg_Hz0u4i2o0Ln4nL_5NtO"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary">WEBINAR</div>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-sm">videocam</span>
+<span class="text-xs font-bold tracking-widest uppercase text-on-surface-variant">Dec 05, 2024</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Leadership in the Digital Age</h3>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">An exclusive masterclass featuring alumni leaders in global tech firms discussing the future of work.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-primary font-bold">Free</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold group-hover:bg-secondary transition-colors">Join Stream</button>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="glass-card rounded-xl p-6 shadow-sm group hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-48 rounded-lg overflow-hidden mb-6">
+<img alt="Conference" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="University graduation caps thrown in air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBLo8bGVD1PUlo4aGgOJTBfysqUgBCGFa9_MtdHh-f-rIHww-geGKT2kEUjYn5sMFzcatCZUYyeT5NewL_9SC4O8yUXj7g2iws8jgozH6Gh5NUSt9JL1Qidkv1gFy2pULY3CP9n05NTQttznL5BRkkfjvrq2nEkFewXRkOJnR5KDywxBlVyWwDsj6ltaZrjmmABP9twQE4Uw1_EV7FDwgqljIAvVf1-Ff1wi3_QjYBIo88X9sp6IL72I-MfPtg-RVivXfW85hu4uR-"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary">CONFERENCE</div>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+<span class="text-xs font-bold tracking-widest uppercase text-on-surface-variant">Jan 12, 2025</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Lagos Chapter Annual Summit</h3>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">Networking, strategic partnerships, and dinner. Connect with the most influential alumni in the commercial capital.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-primary font-bold">₦10,000</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold group-hover:bg-secondary transition-colors">Book Seat</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Events Highlights -->
+<section class="px-8 py-24" id="past">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16 text-center">
+<h2 class="text-4xl font-bold text-primary tracking-tight mb-4">Past Highlights</h2>
+<p class="text-on-surface-variant">The moments that defined our last season. Relive the heritage.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 rounded-[2rem] overflow-hidden relative group">
+<img alt="Large group event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Aerial shot of a crowded alumni festival" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYHjOxHLK8q_5XK8FyA0l4WsNCiiwP6ni0SU7dEzICRnkaTrC_vVLTsX0k90vKZKGSZ5gU5GIw35uxkKW3CskQet-_Bz-tcvqX0DBeLLNm-waJGlz5cJnR0Nwg8PypokQsXjGRCqfmDWW4vhHOQfbrWCQn1Rge1ovkEhiCu_IBCeU5cq5s-e-N2y6B7tKx9S1iBSqykgIDKME7q40zrNC0A5ANNwNoNr4ea8WUO7pJXAdYjSA1D3OK9ry3qL81mXPwzcyM1dTnWEeO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<h4 class="text-white text-2xl font-bold">2023 Summer Festival</h4>
+<p class="text-white/80 text-sm">A record-breaking 1,200 attendees joined us for the outdoor gala.</p>
+</div>
+</div>
+<div class="md:col-span-2 md:row-span-1 rounded-[2rem] overflow-hidden relative group">
+<img alt="Speaker" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Speaker on stage at a professional event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwLRn5Y_7PMGDWF-KFWxa4J5KKsQOp-wrhq16mG8xDAHc_Hdd-u2uf-mRTy6xWgcZW1AxMWiaac0K4LyN_23QIB21rqG244k0BajjmEarWzgj-rJ52hjzrQElr7R--spIxjVtYcoE3y1lAgbQD7RXMk87VYoS7YTKN-lKoS29bgBZ1JiPUkLLHSwq2ONpp7QyM7DT70SXhvbW2QbKN3N5VYCfUSSmp0ORscFmg4dBt0-MYaODHND3b04is7XYaeLVTD9vptv5Y6nye"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white text-xl font-bold">Innovation Symposium</h4>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 rounded-[2rem] overflow-hidden relative group">
+<img alt="Networking" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="People talking and laughing at a networking event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKJfn4DdsKTvouvP8MVICkc_Fb_rFASufLuaxDyKJFvCEge3q4kdodYNbCGUX7sB-4Z1jyU-YVfjROz8ixJ270iPIk833nEHcU43tUVLAFiuM2nfmnrcajirfQQzEHtY0VdAMnMaqUw7tyD6F63SiUFjLbeHgCSCa_ENXAbBB7M6FxgVDGHXkXt7h5P751XqgqFvF2RGm6PgbAJnnazh2CKlhekelBPqxLlZXEV9cIC-OZzmNmY7oT9l-ewbjsgovHIg9SdrZ6sybh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white text-lg font-bold">Networking Mixer</h4>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 rounded-[2rem] overflow-hidden relative group">
+<img alt="Dinner" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Elegant table setting for a formal dinner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjMfDShDKkZq6Iu79gcmN8vKKmamdUiEqeX-AW_1ZsBA2IciOJLu5hT7So-mfjww1gYzqzOxQV6SQ7M090IML6Td7unrAO35tIxKXK3LFnQrqLuc4VVDmMv-cT-OvX-j_ytscWY6zTyr07wB3kKFwDij5KgrBc1EU-lzsFmedViCV4n3JZpDRqTClT9kfwjynTCOyfpWAbz6aSHpjCqUlvsegkbTkYXEHq7cddfpoS2fwkxY_D4RYIszkoD5p27IGD1377PJf__fNt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white text-lg font-bold">Founder's Dinner</h4>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                        View Full Archive <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Newsletter Section (Tonal Shift) -->
+<section class="px-8 py-20 bg-primary text-on-primary">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-xl">
+<h2 class="text-3xl font-bold mb-4">Never Miss an Opportunity.</h2>
+<p class="text-on-primary-container leading-relaxed">Join 5,000+ alumni receiving monthly updates on new events, webinars, and exclusive gatherings.</p>
+</div>
+<div class="w-full md:w-auto flex flex-col sm:flex-row gap-4">
+<input class="bg-primary-container border-none rounded-xl px-6 py-4 text-white placeholder:text-on-primary-container/50 focus:ring-2 focus:ring-secondary-container min-w-[300px]" placeholder="alumni@email.com" type="email"/>
+<button class="bg-secondary-container text-on-secondary-container font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-900 dark:bg-black w-full border-t-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<span class="text-lg font-bold text-white tracking-widest uppercase">UNNSSAA</span>
+<p class="font-sans text-stone-400 text-sm leading-relaxed">
+                    The official alumni association of the University of Nigeria Nsukka Secondary School. Shaping tomorrow by connecting today.
+                </p>
+</div>
+<div class="space-y-6">
+<h5 class="text-amber-500 font-bold uppercase text-xs tracking-[0.2em]">Quick Links</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="alumni_directory.html">Directory</a></li>
+<li><a class="text-white font-semibold text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="events.html">Events</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="careers.html">Careers</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-amber-500 font-bold uppercase text-xs tracking-[0.2em]">Compliance</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="contact.html#privacy">Privacy Policy</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="contact.html#terms">Terms</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-amber-500 font-bold uppercase text-xs tracking-[0.2em]">Contact Us</h5>
+<p class="font-sans text-stone-400 text-sm leading-relaxed">
+                    Nsukka Campus, Enugu State, Nigeria.<br/>
+                    support@unnssaa.org
+                </p>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center hover:bg-amber-500 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-white text-base">share</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-stone-800 py-8 px-12">
+<p class="font-sans text-stone-400 text-xs text-center">© 2024 UNNSSAA. Heritage &amp; Future.</p>
+</div>
+</footer>
+<script src="app.js"></script>
+</body></html>

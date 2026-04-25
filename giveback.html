@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Support UNNSSAA initiatives. Donate to infrastructure projects, scholarships, and academic empowerment.">
+<title>Give Back | UNNSSAA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="site-responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-container": "#745c00",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-secondary": "#ffffff",
+                        "primary": "#00342b",
+                        "surface-bright": "#fcf9f8",
+                        "surface-tint": "#29695b",
+                        "secondary-fixed-dim": "#e9c349",
+                        "inverse-on-surface": "#f3f0ef",
+                        "tertiary-fixed-dim": "#b5c8df",
+                        "primary-container": "#004d40",
+                        "on-tertiary-fixed-variant": "#36485b",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#574500",
+                        "tertiary-container": "#334557",
+                        "secondary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#091d2e",
+                        "on-surface-variant": "#3f4945",
+                        "on-primary-fixed": "#00201a",
+                        "tertiary-fixed": "#d1e4fb",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-container": "#9fb2c8",
+                        "outline-variant": "#bfc9c4",
+                        "secondary": "#735c00",
+                        "surface-dim": "#dcd9d9",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#afefdd",
+                        "surface-container": "#f0edec",
+                        "on-error-container": "#93000a",
+                        "surface": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "outline": "#707975",
+                        "inverse-surface": "#313030",
+                        "on-background": "#1c1b1b",
+                        "on-primary-container": "#7ebdac",
+                        "on-primary-fixed-variant": "#065043",
+                        "inverse-primary": "#94d3c1",
+                        "on-secondary-fixed": "#241a00",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#ebe7e7",
+                        "tertiary": "#1c2f40",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "primary-fixed-dim": "#94d3c1",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#fed65b"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(252, 249, 248, 0.7);
+            backdrop-filter: blur(24px);
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(28, 27, 27, 0.06);
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #giveback-receipt-card,
+            #giveback-receipt-card * {
+                visibility: visible;
+            }
+
+            #giveback-receipt-card {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                border-radius: 0;
+                border: 1px solid #d6d3d1;
+                background: #ffffff;
+                color: #111827;
+            }
+
+            #giveback-receipt-download,
+            #giveback-receipt-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-emerald-900 dark:text-white">UNNSSAA</div>
+<div class="hidden md:flex items-center gap-8 font-sans antialiased text-sm font-medium tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="home.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="about.html">About</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="alumni_directory.html">Directory</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="events.html">Events</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="news.html">Stories</a>
+<a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-amber-500 pb-1" href="giveback.html">Give Back</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-600 font-medium hover:opacity-80 transition-all">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-bold scale-95 active:scale-90 transition-transform">Contact</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 lg:py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="max-w-3xl">
+<span class="text-secondary font-bold tracking-[0.2em] text-[0.75rem] uppercase mb-6 block">Invest in Excellence</span>
+<h1 class="text-[3.5rem] font-extrabold leading-[1.1] tracking-[-0.04em] text-primary mb-8">
+                        Our Legacy, <br/>Their Future.
+                    </h1>
+<p class="text-lg leading-relaxed text-on-surface-variant mb-10 max-w-xl">
+                        The University of Nigeria Nsukka Secondary School shaped who we are. Today, we invite you to join us in ensuring the next generation of Lions has the tools to surpass our achievements.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-xl font-bold editorial-shadow hover:-translate-y-1 transition-transform" href="#donation-section">Donate Now</a>
+<a class="bg-surface-container-high text-primary px-10 py-4 rounded-xl font-bold hover:bg-surface-container-highest transition-colors" href="#impact-areas">View Impact Areas</a>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute right-[-10%] top-0 w-1/2 h-full opacity-10 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full blur-[120px]"></div>
+</div>
+</section>
+<!-- Why Give - Bento Grid -->
+<section class="px-8 py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-[1.75rem] font-semibold tracking-[-0.01em] text-primary mb-4">Why We Give Back</h2>
+<p class="text-on-surface-variant max-w-2xl">Collective giving transforms individual success into community progress.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="col-span-1 md:col-span-2 bg-surface-container-lowest p-10 rounded-xl editorial-shadow relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">history_edu</span>
+<h3 class="text-xl font-bold text-primary mb-4">Sustaining a Tradition</h3>
+<p class="text-on-surface-variant leading-relaxed">UNN Secondary School has a storied history of academic excellence. Your contributions ensure that the standard of learning remains unmatched in the region.</p>
+</div>
+<div class="absolute right-0 bottom-0 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[12rem]">school</span>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-10 rounded-xl editorial-shadow">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">diversity_3</span>
+<h3 class="text-xl font-bold mb-4">Empowering Talent</h3>
+<p class="opacity-80 leading-relaxed">No brilliant mind should be dimmed by financial constraints. We provide a bridge for the brightest students to reach their full potential.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Areas -->
+<section class="px-8 py-32" id="impact-areas">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="text-[1.75rem] font-semibold tracking-[-0.01em] text-primary mb-4">Impact Areas</h2>
+<p class="text-on-surface-variant">Where your contribution creates the most significant change.</p>
+</div>
+<div class="text-secondary font-bold text-sm tracking-widest uppercase">Target 2024: ₦50M</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Infrastructure -->
+<div class="flex flex-col gap-6 group">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern university campus building architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsbJwS0sEDxWadlMNpczMydolzZ0vhtGBiBc06YDlUW0wMJEbCxq_aIHFCP40NZQet6LwLkjLSsz3WYvYsQVCEfcun8rQ9VT48tCB5h-2DE3bzPwYfv20S_Lml0ddzeAKBcHW93UhWvfnrQ3ipcajsEmP60TN40VYwGpq5S-Q5Wk0f0YPBKPxabcJvYhjBfEX73G89bdHsXPJkHXN_5WbPNSVd0kMprPtdx8HWOwT0nEXK6fR2v__YDdhoIHeGaumGVM-HWgsUZARC"/>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary mb-3">Infrastructure</h4>
+<p class="text-on-surface-variant mb-6">Modernizing classrooms, laboratories, and sports facilities to provide a world-class environment.</p>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[65%]"></div>
+</div>
+<div class="flex justify-between mt-2 text-xs font-bold text-on-surface-variant">
+<span>65% Funded</span>
+<span>₦15M Goal</span>
+</div>
+</div>
+</div>
+<!-- Scholarships -->
+<div class="flex flex-col gap-6 group">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Students celebrating graduation ceremony with caps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqqsd3UTe9sV-b_lWdNfuJS3yWvfl8-gWsgmQXBc9-m-sg9noD8E0VxBpusfD7LoJwyJTKNbOMcH5Rrt_i4ezKbdzmx73zacKe0cGSm4B6h2LeczYcdqs7FZk29qPI3t48tR8J0Tpht_2KzzJwnX5mFFRiFDRznX9yzzn4t7C4e1H1brmZKQMTvsJPs0AfAjKa_Ve7M_KLwdf2bb5J5FqLcfa1hd1yeq1JdcXa-Sacq0QLe62xEttxw2rL_Hb8VgokU7Gif8z1Fjwo"/>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary mb-3">Scholarships</h4>
+<p class="text-on-surface-variant mb-6">Financial aid for high-achieving students from underprivileged backgrounds.</p>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[40%]"></div>
+</div>
+<div class="flex justify-between mt-2 text-xs font-bold text-on-surface-variant">
+<span>40% Funded</span>
+<span>₦20M Goal</span>
+</div>
+</div>
+</div>
+<!-- Digital Transformation -->
+<div class="flex flex-col gap-6 group">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Students using laptops in modern tech lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_nvBIKLGW58SeBjrxMSuNKb60HtFjTEtH7aY5qChCec1hhFj8GyrPQ1z7-53JPGoZNQLXgWuC0jFFdPrxggNDyYE6QFhtcEy6-hs2_MtFQnGvy1CPmHKaBBOSZ8QYvmc4rRc_yzjvy9IzvOZmfgkvr4t6UMXXEtceKBYCff7PMkWXZn-W-JXmsMvnJG7_5upsrAKkaRGQDBa90rLTfDbYH33lR_QxHpGXimw39jOEWFoElQJkD0WiNmv8wDVFTbog1uYZChNJcJNL"/>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary mb-3">Digital Transformation</h4>
+<p class="text-on-surface-variant mb-6">Equipping the school with high-speed internet, e-libraries, and modern computing tools.</p>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[85%]"></div>
+</div>
+<div class="flex justify-between mt-2 text-xs font-bold text-on-surface-variant">
+<span>85% Funded</span>
+<span>₦15M Goal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Donation Section -->
+<section class="px-8 py-20 bg-primary text-on-primary" id="donation-section">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-[2.5rem] font-extrabold tracking-tight mb-4">Make Your Contribution</h2>
+<p class="text-on-primary-container text-lg max-w-xl mx-auto">Select a tier or enter a custom amount to support our mission.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+<!-- Tier 1 -->
+<button class="bg-primary-container border-2 border-transparent hover:border-secondary p-8 rounded-xl transition-all group text-left">
+<div class="text-secondary font-bold text-sm mb-2">FRIEND</div>
+<div class="text-2xl font-bold">₦10,000</div>
+</button>
+<!-- Tier 2 -->
+<button class="bg-primary-container border-2 border-transparent hover:border-secondary p-8 rounded-xl transition-all group text-left">
+<div class="text-secondary font-bold text-sm mb-2">PARTNER</div>
+<div class="text-2xl font-bold">₦50,000</div>
+</button>
+<!-- Tier 3 -->
+<button class="bg-secondary-container text-on-secondary-container p-8 rounded-xl transition-all scale-105 shadow-xl text-left">
+<div class="text-primary font-bold text-sm mb-2">PATRON</div>
+<div class="text-2xl font-bold">₦100,000</div>
+</button>
+<!-- Tier 4 (Custom) -->
+<div class="bg-primary-container p-4 rounded-xl flex items-center">
+<div class="w-full">
+<div class="text-secondary font-bold text-[0.65rem] mb-1 px-4">CUSTOM</div>
+<input class="bg-transparent border-none text-xl font-bold focus:ring-0 placeholder:text-white/30 w-full px-4" id="giveback-custom-amount" placeholder="₦ Custom" type="text"/>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<button class="bg-white text-primary px-16 py-5 rounded-full font-extrabold text-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all mb-8" id="giveback-donate-btn">
+                        Donate Now
+                    </button>
+<p class="text-sm text-on-primary-container mt-1 mb-4" id="giveback-status"></p>
+<div class="hidden w-full max-w-xl rounded-xl bg-white/10 border border-white/20 p-5 mb-6" id="giveback-receipt-card">
+<p class="text-xs uppercase tracking-widest font-bold text-secondary-fixed mb-3">Donation Receipt</p>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<p class="text-on-primary-container">Donor</p>
+<p class="font-semibold text-right" id="giveback-receipt-donor">-</p>
+<p class="text-on-primary-container">Reference</p>
+<p class="font-semibold text-right" id="giveback-receipt-reference">-</p>
+<p class="text-on-primary-container">Amount</p>
+<p class="font-semibold text-right" id="giveback-receipt-amount">-</p>
+<p class="text-on-primary-container">Status</p>
+<p class="font-semibold text-right" id="giveback-receipt-status">-</p>
+<p class="text-on-primary-container">Channel</p>
+<p class="font-semibold text-right" id="giveback-receipt-channel">-</p>
+<p class="text-on-primary-container">Paid At</p>
+<p class="font-semibold text-right" id="giveback-receipt-paid-at">-</p>
+</div>
+<div class="mt-4 flex justify-end gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-white/30 text-xs font-semibold hover:bg-white/10" id="giveback-receipt-download" type="button">Download</button>
+<button class="px-3 py-1.5 rounded-lg border border-white/30 text-xs font-semibold hover:bg-white/10" id="giveback-receipt-print" type="button">Print</button>
+</div>
+</div>
+<div class="flex items-center gap-6 opacity-60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="text-xs font-medium">Secure Payment</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">receipt_long</span>
+<span class="text-xs font-medium">Tax Deductible</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial / Story -->
+<section class="px-8 py-32">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-8">format_quote</span>
+<p class="text-2xl md:text-3xl font-medium italic text-primary leading-relaxed mb-10">
+                    "Being part of the Class of '88 gave me more than an education; it gave me a community. Giving back isn't just a duty—it's a celebration of how far we've all come."
+                </p>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait of a successful male alumni" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu1ex2f-HCbiWOYnkIGzKpxvyPmXjZRDTuy8ldDi5H-Ly0PyOZekssYai8m0MTLmI-f5bZST-9gE96Tbdf_tewBVongJh9kx5YNHX_g5D41i1VRalcPMgX9LEOGY3w2iKut-Path6G3MwtGCK7m9JjocZsXh1uYN5j2u5DUDn7hxjF32oouNU7BLW1yw2-RafVUAGvvv-HKPQ2vXfU7RfwNpHT4S8gfsIEsMJmURZkr-J6OUI21aUIDuphFKXV8NvXwi2tshyECOBa"/>
+</div>
+<div class="text-left">
+<div class="font-bold text-primary">Dr. Emeka Okafor</div>
+<div class="text-sm text-on-surface-variant">Class of '88 | Chief Patron</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-900 dark:bg-black w-full border-t-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-white tracking-widest uppercase mb-6">UNNSSAA</div>
+<p class="font-sans text-stone-400 text-sm leading-relaxed mb-6">
+                    Preserving the legacy of excellence and fostering a future of innovation for all Lions.
+                </p>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-6">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm" href="alumni_directory.html">Directory</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm" href="events.html">Events</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm" href="careers.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm" href="contact.html#privacy">Privacy Policy</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors text-sm" href="contact.html#terms">Terms</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-6">Stay Connected</h5>
+<p class="text-stone-500 text-sm mb-4">Join our monthly newsletter for impact updates.</p>
+<div class="flex gap-2">
+<input class="bg-stone-800 border-none rounded-lg text-sm text-white px-4 py-2 w-full" placeholder="Email" type="email"/>
+<button class="bg-amber-500 text-stone-900 p-2 rounded-lg">
+<span class="material-symbols-outlined block">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-stone-800 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-sans text-stone-400 text-sm leading-relaxed">© 2024 UNNSSAA. Heritage &amp; Future.</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-stone-500 hover:text-amber-500 cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-stone-500 hover:text-amber-500 cursor-pointer">alternate_email</span>
+<span class="material-symbols-outlined text-stone-500 hover:text-amber-500 cursor-pointer">podcasts</span>
+</div>
+</div>
+</footer>
+<script>window.UNNSSAA_DISABLE_LOCAL_GIVEBACK = true;</script>
+<script src="app.js"></script>
+<script src="api-client.js"></script>
+<script src="giveback.js"></script>
+</body></html>

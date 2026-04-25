@@ -1,0 +1,242 @@
+{
+  "members": [
+    {
+      "name": "Dr. Chuka Obi",
+      "classYear": "1992",
+      "profession": "Neurosurgeon",
+      "chapter": "Lagos",
+      "location": "Lagos, Nigeria",
+      "status": "Active",
+      "verified": true,
+      "joinedAt": "2024-05-11T09:00:00.000Z"
+    },
+    {
+      "name": "Amaka Nwosu",
+      "classYear": "1998",
+      "profession": "Product Designer",
+      "chapter": "Abuja",
+      "location": "Abuja, Nigeria",
+      "status": "Active",
+      "verified": true,
+      "joinedAt": "2024-05-13T14:35:00.000Z"
+    },
+    {
+      "name": "Obinna Eze",
+      "classYear": "2001",
+      "profession": "Software Engineer",
+      "chapter": "Enugu",
+      "location": "Enugu, Nigeria",
+      "status": "Active",
+      "verified": true,
+      "joinedAt": "2024-05-15T11:20:00.000Z"
+    },
+    {
+      "name": "Ngozi Anya",
+      "classYear": "2004",
+      "profession": "Hospital Administrator",
+      "chapter": "London",
+      "location": "London, UK",
+      "status": "Pending",
+      "verified": false,
+      "joinedAt": "2024-05-17T16:00:00.000Z"
+    },
+    {
+      "name": "Ifeanyi Okafor",
+      "classYear": "2007",
+      "profession": "Policy Analyst",
+      "chapter": "Houston",
+      "location": "Houston, USA",
+      "status": "Active",
+      "verified": true,
+      "joinedAt": "2024-05-18T08:15:00.000Z"
+    },
+    {
+      "name": "Adaeze Nnamdi",
+      "classYear": "2010",
+      "profession": "Healthcare Founder",
+      "chapter": "Toronto",
+      "location": "Toronto, Canada",
+      "status": "Active",
+      "verified": false,
+      "joinedAt": "2024-05-19T12:45:00.000Z"
+    },
+    {
+      "name": "Emeka Ude",
+      "classYear": "2013",
+      "profession": "Architect",
+      "chapter": "Port Harcourt",
+      "location": "Port Harcourt, Nigeria",
+      "status": "Active",
+      "verified": true,
+      "joinedAt": "2024-05-20T10:10:00.000Z"
+    },
+    {
+      "name": "Chinwe Nduka",
+      "classYear": "2016",
+      "profession": "Data Analyst",
+      "chapter": "Johannesburg",
+      "location": "Johannesburg, South Africa",
+      "status": "Pending",
+      "verified": false,
+      "joinedAt": "2024-05-21T18:25:00.000Z"
+    }
+  ],
+  "events": [
+    {
+      "title": "Tech Lions Networking Night",
+      "date": "2024-06-15",
+      "schedule": "18:00 WAT",
+      "type": "Networking",
+      "location": "Lagos Oriental Hotel"
+    },
+    {
+      "title": "Professional Mentorship Workshop",
+      "date": "2024-07-02",
+      "schedule": "14:00 WAT",
+      "type": "Mentorship",
+      "location": "Virtual (Zoom)"
+    },
+    {
+      "title": "Annual General Meeting 2024",
+      "date": "2024-08-22",
+      "schedule": "10:00 WAT",
+      "type": "Governance",
+      "location": "UNN Campus, Nsukka"
+    },
+    {
+      "title": "Lions Giving Gala",
+      "date": "2024-09-12",
+      "schedule": "19:00 WAT",
+      "type": "Fundraising",
+      "location": "Abuja Continental Hotel"
+    }
+  ],
+  "donations": [
+    {
+      "donor": "Dr. Chuka Obi",
+      "classYear": "1992",
+      "amount": 1200000,
+      "details": "Chair gift for the mentorship endowment"
+    },
+    {
+      "donor": "Amaka Nwosu",
+      "classYear": "1998",
+      "amount": 250000,
+      "details": "Event sponsorship for the networking night"
+    },
+    {
+      "donor": "Obinna Eze",
+      "classYear": "2001",
+      "amount": 300000,
+      "details": "Career hub refresh and content support"
+    },
+    {
+      "donor": "Ngozi Anya",
+      "classYear": "2004",
+      "amount": 175000,
+      "details": "Student support fund pledge"
+    },
+    {
+      "donor": "Ifeanyi Okafor",
+      "classYear": "2007",
+      "amount": 500000,
+      "details": "Annual operations contribution"
+    },
+    {
+      "donor": "Adaeze Nnamdi",
+      "classYear": "2010",
+      "amount": 400000,
+      "details": "Healthcare outreach campaign"
+    },
+    {
+      "donor": "Emeka Ude",
+      "classYear": "2013",
+      "amount": 225000,
+      "details": "Infrastructure and alumni archive support"
+    }
+  ],
+  "grievances": [
+    {
+      "trackingId": "GV-REG-001",
+      "category": "Membership record mismatch",
+      "message": "Name spelling does not match the registry sample.",
+      "status": "Received",
+      "at": "2024-05-21T08:10:00.000Z"
+    },
+    {
+      "trackingId": "GV-REG-002",
+      "category": "Chapter update",
+      "message": "Request to move chapter affiliation to Abuja.",
+      "status": "In Review",
+      "at": "2024-05-21T10:25:00.000Z"
+    },
+    {
+      "trackingId": "GV-REG-003",
+      "category": "Event registration issue",
+      "message": "Could not see RSVP confirmation after signup.",
+      "status": "Resolved",
+      "at": "2024-05-21T13:00:00.000Z"
+    }
+  ],
+  "whistleReports": [
+    {
+      "trackingId": "WB-SEC-001",
+      "note": "Anonymous report regarding duplicate records and missing approval logs.",
+      "at": "2024-05-21T09:40:00.000Z"
+    },
+    {
+      "trackingId": "WB-SEC-002",
+      "note": "Encrypted submission concerning finance reconciliation review.",
+      "at": "2024-05-21T11:55:00.000Z"
+    },
+    {
+      "trackingId": "WB-SEC-003",
+      "note": "Registry verification mismatch flagged by a chapter coordinator.",
+      "at": "2024-05-21T15:15:00.000Z"
+    }
+  ],
+  "careers": [
+    {
+      "title": "Senior Business Analyst",
+      "company": "Access Bank Plc",
+      "location": "Lagos, NG",
+      "type": "Full Time",
+      "description": "An exciting opportunity for Lions in the financial sector. Requires 5+ years of experience in data-driven strategy and financial modeling."
+    },
+    {
+      "title": "Graduate Engineer Trainee",
+      "company": "Dangote Group",
+      "location": "Kano, NG",
+      "type": "Internship",
+      "description": "Kickstart your engineering career. Perfect for recent UNN graduates looking to gain hands-on industrial experience."
+    },
+    {
+      "title": "Clinical Psychologist",
+      "company": "Federal Ministry of Health",
+      "location": "Abuja, NG",
+      "type": "Contract",
+      "description": "Providing mental health services and counseling. Ideal for practitioners looking to make a difference in public health."
+    },
+    {
+      "title": "Product Marketing Manager",
+      "company": "Flutterwave",
+      "location": "Remote",
+      "type": "Full Time",
+      "description": "Lead product launches and go-to-market strategies for our new fintech initiatives across Africa."
+    },
+    {
+      "title": "Legal Counsel",
+      "company": "NNPC",
+      "location": "Port Harcourt, NG",
+      "type": "Full Time",
+      "description": "Manage corporate compliance, draft legal documentation, and handle dispute resolutions in the energy sector."
+    },
+    {
+      "title": "UI/UX Design Intern",
+      "company": "Paystack",
+      "location": "Lagos, NG",
+      "type": "Internship",
+      "description": "Help design beautiful and intuitive payment experiences. Portfolio required."
+    }
+  ]
+}

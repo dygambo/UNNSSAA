@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | UNNSSAA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="site-responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#745c00",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary": "#ffffff",
+              "primary": "#00342b",
+              "surface-bright": "#fcf9f8",
+              "surface-tint": "#29695b",
+              "secondary-fixed-dim": "#e9c349",
+              "inverse-on-surface": "#f3f0ef",
+              "tertiary-fixed-dim": "#b5c8df",
+              "primary-container": "#004d40",
+              "on-tertiary-fixed-variant": "#36485b",
+              "background": "#fcf9f8",
+              "on-secondary-fixed-variant": "#574500",
+              "tertiary-container": "#334557",
+              "secondary-fixed": "#ffe088",
+              "on-tertiary-fixed": "#091d2e",
+              "on-surface-variant": "#3f4945",
+              "on-primary-fixed": "#00201a",
+              "tertiary-fixed": "#d1e4fb",
+              "surface-container-highest": "#e5e2e1",
+              "on-tertiary-container": "#9fb2c8",
+              "outline-variant": "#bfc9c4",
+              "secondary": "#735c00",
+              "surface-dim": "#dcd9d9",
+              "on-error": "#ffffff",
+              "primary-fixed": "#afefdd",
+              "surface-container": "#f0edec",
+              "on-error-container": "#93000a",
+              "surface": "#fcf9f8",
+              "error": "#ba1a1a",
+              "outline": "#707975",
+              "inverse-surface": "#313030",
+              "on-background": "#1c1b1b",
+              "on-primary-container": "#7ebdac",
+              "on-primary-fixed-variant": "#065043",
+              "inverse-primary": "#94d3c1",
+              "on-secondary-fixed": "#241a00",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e5e2e1",
+              "surface-container-high": "#ebe7e7",
+              "tertiary": "#1c2f40",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "primary-fixed-dim": "#94d3c1",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fed65b"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-emerald-900 dark:text-white">UNNSSAA</div>
+<div class="hidden md:flex items-center gap-8 font-sans antialiased text-sm font-medium tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="home.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="about.html">About</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="alumni_directory.html">Directory</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="events.html">Events</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="news.html">Stories</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="giveback.html">Give Back</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-emerald-900 dark:text-emerald-500 font-medium text-sm hover:opacity-80 transition-all duration-300 ease-out scale-95 active:scale-90 transition-transform">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-semibold hover:opacity-80 transition-all duration-300 ease-out scale-95 active:scale-90 transition-transform text-emerald-900 dark:text-emerald-400 border-b-2 border-amber-500 pb-1">Contact</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Header -->
+<header class="mb-20">
+<span class="label-md uppercase tracking-[0.1em] text-secondary font-bold mb-4 block">Get in touch</span>
+<h1 class="text-[3.5rem] md:text-[4.5rem] font-extrabold text-primary leading-[1.1] tracking-[-0.04em] mb-6">
+                Connected by History,<br/>Reached in a Moment.
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
+                Whether you're looking to reconnect with classmates, inquire about membership, or support our current projects, our team is ready to assist.
+            </p>
+</header>
+<!-- Asymmetrical Layout Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Contact Form (The Glass Panel) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-8 md:p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32"></div>
+<form class="relative z-10 space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-primary/60 px-1">Full Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Chidi Azikiwe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-primary/60 px-1">Email Address</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="chidi@alumni.unn.edu" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-primary/60 px-1">Subject</label>
+<select class="w-full bg-surface-container-high border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all appearance-none">
+<option>General Inquiry</option>
+<option>Membership &amp; Registration</option>
+<option>Donations &amp; Giving</option>
+<option>Event Participation</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-primary/60 px-1">Your Message</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="How can we help you today?" rows="5"></textarea>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-5 rounded-xl font-bold text-lg shadow-xl shadow-primary/10 hover:translate-y-[-2px] hover:shadow-2xl transition-all duration-300" type="submit">
+                        Send Message
+                    </button>
+</form>
+</div>
+<!-- Contact Information Bento -->
+<div class="lg:col-span-5 grid grid-cols-1 gap-6">
+<!-- Info Card: Email -->
+<div class="bg-surface-container-highest rounded-xl p-8 flex items-start gap-6 group hover:translate-y-[-4px] transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-primary mb-1">Email Us</h3>
+<p class="text-on-surface-variant mb-3">For all general and formal correspondence.</p>
+<a class="text-primary font-bold hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4" href="mailto:hello@unnssaa.org">hello@unnssaa.org</a>
+</div>
+</div>
+<!-- Info Card: Phone -->
+<div class="bg-primary rounded-xl p-8 flex items-start gap-6 group hover:translate-y-[-4px] transition-all duration-300 text-white">
+<div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-secondary-fixed shrink-0">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white mb-1">Call Our Office</h3>
+<p class="text-on-primary-container mb-3">Available Monday to Friday, 9am - 5pm.</p>
+<a class="text-secondary-fixed font-bold hover:opacity-80 transition-all" href="tel:+234800UNNSSAA">+234 800 UNNSSAA</a>
+</div>
+</div>
+<!-- Info Card: Location -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden group hover:translate-y-[-4px] transition-all duration-300">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-60 group-hover:scale-110 group-hover:grayscale-0 transition-all duration-700" data-alt="Satellite map view of Nsukka campus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-1iIVak3Xo2DFQ_pWnM0WVdmSqIwiVBnbd9L3Ifj7Dpc8OnDpmvcsRhC3Nnc4Ve1Ut4s7bJzxpYTuwmB4q85XtZQVik6pVq-f7up-Y2aDMcZ6w5KROZAaMCThgOWz_c0xjx-TjpnDYeJBA9f5EFTZnUZ8TxKJf56ExjWCVHuGkDXd3bivWyB2KHyuH5zNArNDckuSen5pAye_VdVd38qAjme-cAaBjirPUe09WauzXlLmhYgiRwQz67qI2JW4Tm6FJaFYQxyxDaUM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+</div>
+<div class="p-8 pt-0 -mt-8 relative z-10">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-primary shrink-0 shadow-md mb-4">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<h3 class="text-lg font-bold text-primary mb-1">Our Heritage Site</h3>
+<p class="text-on-surface-variant">UNN Secondary School Campus,<br/>Nsukka, Enugu State, Nigeria.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Governance & Compliance Portals -->
+<section class="mt-24" id="faq">
+<div class="mb-10">
+<span class="text-xs font-bold tracking-[0.1em] text-secondary uppercase">Governance &amp; Compliance</span>
+<h2 class="text-3xl font-extrabold text-primary mt-3">Grievance and Whistleblowing Portals</h2>
+<p class="text-on-surface-variant mt-4 max-w-3xl">In line with the PRD, members can submit structured grievances with status tracking, or report sensitive concerns through an anonymous whistleblowing channel.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<form class="bg-surface-container-low rounded-xl p-8 space-y-5" action="members_dashboard.html">
+<h3 class="text-xl font-bold text-primary">Grievance Portal</h3>
+<input class="w-full bg-surface-container-high border-none rounded-xl" placeholder="Subject" type="text"/>
+<textarea class="w-full bg-surface-container-high border-none rounded-xl" placeholder="Describe your complaint or feedback" rows="4"></textarea>
+<select class="w-full bg-surface-container-high border-none rounded-xl appearance-none">
+<option>Tracking Status: Received</option>
+<option>Tracking Status: Under Review</option>
+<option>Tracking Status: Resolved</option>
+</select>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold" type="submit">Submit Grievance</button>
+</form>
+<form class="bg-tertiary text-white rounded-xl p-8 space-y-5" action="members_dashboard.html">
+<h3 class="text-xl font-bold">Whistleblowing Form</h3>
+<p class="text-sm text-on-tertiary-container">Anonymous reporting for ethical concerns and policy violations. A unique tracking ID will be generated for follow-up.</p>
+<textarea class="w-full bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/60" placeholder="Report details" rows="4"></textarea>
+<input class="w-full bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/60" placeholder="Optional secure contact (leave blank to stay anonymous)" type="text"/>
+<div class="text-xs text-secondary-fixed">Security note: handled through encrypted storage and restricted admin access.</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-xl font-bold" type="submit">Submit Secure Report</button>
+</form>
+</div>
+</section>
+<!-- FAQ CTA Section -->
+<section class="mt-32 rounded-xl bg-tertiary p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Common Questions?</h2>
+<p class="text-on-tertiary-container text-lg mb-10 leading-relaxed">
+                    Check out our frequently asked questions about membership levels, alumni benefits, and how to access your school records.
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform" href="contact.html#faq">View FAQ</a>
+<a class="border border-white/20 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors" href="careers.html">Resource Center</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-900 dark:bg-black w-full border-t-0 tonal-shift-bg-stone-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-bold text-white tracking-widest uppercase">UNNSSAA</div>
+<p class="font-sans text-stone-400 text-sm leading-relaxed">
+                    Upholding the torch of knowledge and legacy of the University of Nigeria Nsukka Secondary School.
+                </p>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:text-amber-500 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="public">public</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:text-amber-500 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-amber-500 dark:text-amber-400 font-bold uppercase text-xs tracking-widest">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="alumni_directory.html">Directory</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="events.html">Events</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="news.html">Stories</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-amber-500 dark:text-amber-400 font-bold uppercase text-xs tracking-widest">Community</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="giveback.html">Give Back</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="careers.html">Careers</a></li>
+<li><a class="text-white font-semibold hover:translate-x-1 inline-block transition-transform duration-200" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-amber-500 dark:text-amber-400 font-bold uppercase text-xs tracking-widest">Newsletter</h4>
+<p class="font-sans text-stone-400 text-sm leading-relaxed">Stay updated with our heritage and future.</p>
+<div class="flex">
+<input class="bg-stone-800 border-none rounded-l-lg py-2 px-4 w-full text-white text-sm focus:ring-1 focus:ring-amber-500" placeholder="Email" type="text"/>
+<button class="bg-amber-500 text-stone-900 px-4 py-2 rounded-r-lg font-bold text-sm">Join</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 w-full max-w-7xl mx-auto">
+<p class="font-sans text-stone-400 text-sm leading-relaxed">© 2024 UNNSSAA. Heritage &amp; Future.</p>
+<div class="flex gap-8">
+<a class="text-stone-500 hover:text-amber-500 transition-colors text-sm" href="#privacy">Privacy Policy</a>
+<a class="text-stone-500 hover:text-amber-500 transition-colors text-sm" href="#terms">Terms</a>
+</div>
+</div>
+</footer>
+<section class="sr-only">
+<div id="privacy">Privacy policy placeholder anchor for navigation.</div>
+<div id="terms">Terms placeholder anchor for navigation.</div>
+</section>
+<script src="app.js"></script>
+</body></html>

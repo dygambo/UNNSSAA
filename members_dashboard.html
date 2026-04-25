@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UNNSSAA Member Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="site-responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#735c00",
+                    "primary-fixed": "#afefdd",
+                    "on-secondary-fixed-variant": "#574500",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1c1b1b",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#065043",
+                    "on-tertiary-container": "#9fb2c8",
+                    "on-tertiary-fixed": "#091d2e",
+                    "on-surface-variant": "#3f4945",
+                    "surface-container-high": "#ebe7e7",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1c1b1b",
+                    "tertiary-fixed-dim": "#b5c8df",
+                    "tertiary-container": "#334557",
+                    "inverse-surface": "#313030",
+                    "outline-variant": "#bfc9c4",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary-fixed": "#00201a",
+                    "surface-tint": "#29695b",
+                    "primary-fixed-dim": "#94d3c1",
+                    "surface": "#fcf9f8",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-primary": "#94d3c1",
+                    "secondary-container": "#fed65b",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-fixed-variant": "#36485b",
+                    "outline": "#707975",
+                    "surface-dim": "#dcd9d9",
+                    "primary-container": "#004d40",
+                    "surface-container": "#f0edec",
+                    "primary": "#00342b",
+                    "tertiary-fixed": "#d1e4fb",
+                    "tertiary": "#1c2f40",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#745c00",
+                    "on-primary-container": "#7ebdac",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#ffe088",
+                    "inverse-on-surface": "#f3f0ef",
+                    "background": "#fcf9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fcf9f8; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(24px); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .sidebar-open { transform: translateX(0) !important; }
+    </style>
+</head>
+<body class="text-on-surface overflow-x-hidden">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-[#fcf9f8] dark:bg-slate-950 flex flex-col py-8 border-r border-slate-100 dark:border-slate-800 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out" id="member-sidebar">
+<div class="px-8 mb-10 flex justify-between items-center">
+<div>
+<h1 class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter">UNNSSAA</h1>
+<p class="text-[10px] font-bold tracking-widest text-secondary uppercase mt-1">Heritage &amp; Future</p>
+</div>
+<button id="close-member-sidebar" class="lg:hidden p-2 text-slate-500 hover:bg-slate-200 rounded-lg">
+    <span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active State Dashboard -->
+<a class="flex items-center gap-3 px-6 py-4 text-emerald-900 dark:text-emerald-100 bg-emerald-50/50 dark:bg-emerald-900/20 rounded-r-full font-inter text-sm font-semibold tracking-wide uppercase hover:translate-x-1 transform transition-transform transition-all duration-300 ease-out" href="members_dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-6 py-4 text-slate-500 dark:text-slate-400 font-inter text-sm font-semibold tracking-wide uppercase hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:translate-x-1 transform transition-transform transition-all duration-300 ease-out" href="alumni_directory.html">
+<span class="material-symbols-outlined">group</span>
+                Directory
+            </a>
+<a class="flex items-center gap-3 px-6 py-4 text-slate-500 dark:text-slate-400 font-inter text-sm font-semibold tracking-wide uppercase hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:translate-x-1 transform transition-transform transition-all duration-300 ease-out" href="events.html">
+<span class="material-symbols-outlined">event</span>
+                Events
+            </a>
+<a class="flex items-center gap-3 px-6 py-4 text-slate-500 dark:text-slate-400 font-inter text-sm font-semibold tracking-wide uppercase hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:translate-x-1 transform transition-transform transition-all duration-300 ease-out" href="careers.html">
+<span class="material-symbols-outlined">work</span>
+                Careers
+            </a>
+<a class="flex items-center gap-3 px-6 py-4 text-slate-500 dark:text-slate-400 font-inter text-sm font-semibold tracking-wide uppercase hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:translate-x-1 transform transition-transform transition-all duration-300 ease-out" href="giveback.html">
+<span class="material-symbols-outlined">volunteer_activism</span>
+                Giving
+            </a>
+<a class="flex items-center gap-3 px-6 py-4 text-slate-500 dark:text-slate-400 font-inter text-sm font-semibold tracking-wide uppercase hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:translate-x-1 transform transition-transform transition-all duration-300 ease-out" href="about.html">
+<span class="material-symbols-outlined">person</span>
+                Profile
+            </a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full py-4 bg-primary text-white rounded-xl font-bold tracking-tight text-sm active:scale-95 transition-transform shadow-lg shadow-emerald-900/10 hover:bg-primary-container transition-colors">
+                Donate Now
+            </button>
+</div>
+</aside>
+<!-- Main Wrapper -->
+<div class="ml-0 lg:ml-72 min-h-screen flex flex-col w-full lg:w-[calc(100%-18rem)]">
+<!-- TopAppBar Anchor -->
+<header class="w-full sticky top-0 z-40 bg-white/70 backdrop-blur-xl flex flex-wrap lg:flex-nowrap justify-between items-center px-4 sm:px-8 py-4 min-h-[5rem] shadow-[0_20px_40px_rgba(28,27,27,0.06)] gap-4">
+<div class="flex items-center gap-4 flex-1">
+<button id="open-member-sidebar" class="lg:hidden p-2 text-slate-600 hover:bg-slate-200 rounded-lg shrink-0">
+    <span class="material-symbols-outlined">menu</span>
+</button>
+<div class="w-full relative group max-w-xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-2.5 bg-surface-container rounded-full border-none focus:ring-2 focus:ring-primary/20 transition-all text-sm font-medium" placeholder="Search the network..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2 sm:gap-6 ml-0 sm:ml-8 shrink-0">
+<button class="relative text-slate-500 cursor-pointer active:scale-95 transition-transform hidden sm:block">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-secondary rounded-full border-2 border-white"></span>
+</button>
+<button class="text-slate-500 cursor-pointer active:scale-95 transition-transform hidden sm:block">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+<div class="flex items-center gap-3 pl-0 sm:pl-6 sm:border-l border-slate-100">
+<div class="text-right hidden xl:block">
+<p class="text-sm font-bold text-emerald-900">Dr. Chuka Obi</p>
+<p class="text-[10px] font-bold text-secondary tracking-widest uppercase">Class of '92</p>
+</div>
+<img alt="Member Profile" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover ring-2 ring-emerald-50 shadow-sm" data-alt="professional portrait of a confident middle-aged man in business attire, warm lighting, blurred academic office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjl_94o7VSJAmnAwDmHxyE3iN8YBFqYSTBbU-m7ZP5yt63qCS6tHeeUcsNtHsRU0Bu-1HtkuLCeKqSImjNlc2xahjLbV2tjZXag841VrBdtxtLakGW41sOAlsWHqqrfN85pCkSG8NZVwh7lB_cERL599z0qfsDgFubHgHPNfQSw3bhYM6Hc9BaC3hH8PzqqYu_omKqJ1CDOkeEhh_MnwyJZyfXKNl7CnjE4HXRd08pMdf7k9l6BPGTBz5cuB1AWH7dUh8tUeDM1qqi"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<main class="p-4 sm:p-6 lg:p-10 space-y-6 sm:space-y-10 max-w-7xl mx-auto w-full overflow-x-hidden">
+<!-- Welcome Header -->
+<section class="flex flex-col md:flex-row justify-between items-end gap-6 md:gap-8 bg-gradient-to-br from-primary to-primary-container p-6 sm:p-8 md:p-12 rounded-[2rem] text-white overflow-hidden relative">
+<div class="relative z-10 space-y-2 md:space-y-4 w-full">
+<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter break-words">Welcome back, Lion!</h2>
+<p class="text-primary-fixed opacity-90 max-w-md font-medium leading-relaxed text-sm sm:text-base">Your professional journey continues here. Reconnect, contribute, and elevate the pride.</p>
+</div>
+<div class="relative z-10 w-full md:w-80 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+<div class="flex justify-between items-center mb-3">
+<span class="text-xs font-bold uppercase tracking-widest text-primary-fixed">Profile Completion</span>
+<span class="text-sm font-black">85%</span>
+</div>
+<div class="w-full h-2 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container w-[85%] rounded-full shadow-[0_0_10px_rgba(254,214,91,0.5)]"></div>
+</div>
+<p class="text-[10px] mt-4 opacity-80 font-medium">Add your current role to reach 100%.</p>
+</div>
+<!-- Decorative element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+</section>
+<!-- Stats Bar -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center gap-6 shadow-[0_20px_40px_rgba(28,27,27,0.04)] hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 bg-emerald-50 flex items-center justify-center rounded-2xl text-primary">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">group</span>
+</div>
+<div>
+<p class="text-3xl font-black text-emerald-900">1,248</p>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Network Connections</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center gap-6 shadow-[0_20px_40px_rgba(28,27,27,0.04)] hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 bg-amber-50 flex items-center justify-center rounded-2xl text-secondary">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">event_available</span>
+</div>
+<div>
+<p class="text-3xl font-black text-emerald-900" id="stat-event-actions">03</p>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Upcoming Events</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center gap-6 shadow-[0_20px_40px_rgba(28,27,27,0.04)] hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 bg-blue-50 flex items-center justify-center rounded-2xl text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">volunteer_activism</span>
+</div>
+<div>
+<p class="text-3xl font-black text-emerald-900" id="stat-giving-impact">$4.5k</p>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Giving Impact</p>
+</div>
+</div>
+</div>
+<!-- Bento Grid Main Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Activity Feed -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.04)] min-w-0">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-bold text-emerald-900 tracking-tight">Recent Activity</h3>
+<button class="text-xs font-bold text-secondary uppercase tracking-widest hover:underline">View Global Feed</button>
+</div>
+<div class="space-y-8">
+<div class="flex gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="close-up portrait of a cheerful young African woman wearing modern eyeglasses and a smart-casual blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoYVSobFnmZ7gDBcQEObS5YN7Os8NDhXVDWiWOvwfeIe516ZoyzgfbII1n-9yCF_3hoI006NKIERDjnQw6iLVhne7NtgXNlyzfzsQzi28QkWsKvr4NhhlDFpZ08_Z13zEOak3pDJt3AlMFdvojvrASWARreVJI4T8FD4KKbqlpsyW5ohID_4K-gGNc9erjltTFMqF92VR5NAiqcxDEzYrjmYSvAYAhsEPFqVZfxaCm6VmhJgF588u5OxvzJOp7E4CArvC-KeNLYbKY"/>
+<div>
+<p class="text-sm"><span class="font-bold text-emerald-900">Amaka Nwosu</span> posted a new job opening at <span class="font-bold text-tertiary">Paystack</span></p>
+<p class="text-xs text-slate-400 mt-1">2 hours ago • <span class="text-primary font-semibold">Career Hub</span></p>
+<div class="mt-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-secondary">
+<p class="text-sm font-medium italic text-slate-600">"Looking for Senior Frontend Engineers to join our Lagos team. Priority for Lions!"</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-emerald-900 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div>
+<p class="text-sm"><span class="font-bold text-emerald-900">Alumni Association</span> announced the <span class="font-bold text-emerald-900">2024 Homecoming Gala</span></p>
+<p class="text-xs text-slate-400 mt-1">5 hours ago • <span class="text-secondary font-semibold">Events</span></p>
+</div>
+</div>
+<div class="flex gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="confident professional man in a tailored grey suit smiling, soft natural lighting, contemporary architecture background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdUzVrKlx-VGp4XYaQrPrK5fTWThI7BKzH_zKHkOpqDj6Hgn-jphLiVkI7oUnzbvGw9Vk7_6ykwrfj4eWsskSHjklf9xgtzPDmvfCFYJnaQnltz6-vauTxPzupSVakclN_YGiraHW8wpqJ6E0BX8EjzpYPc3LLOfdrkWFRyp2jvT5z2_vKq4E4BZG5hWi1X4Rwi3AMC-5FP8xWYdTx03rhfTFWEQkkIvRRvlRpYbwfyijPVMd4n3uyloI64N8O1cYp3ry55_-CtVOa"/>
+<div>
+<p class="text-sm"><span class="font-bold text-emerald-900">Obinna Eze</span> shared a memory from the <span class="font-bold text-emerald-900">Class of '98 reunion</span></p>
+<p class="text-xs text-slate-400 mt-1">1 day ago • <span class="text-primary font-semibold">Social</span></p>
+<div class="mt-4 grid grid-cols-2 gap-2">
+<div class="h-32 bg-slate-200 rounded-lg bg-[url('image-44023775f0f3531b9d40b99f36531c36')] bg-cover bg-center" data-alt="group of joyful alumni in formal wear laughing together at a dinner table under warm ambient light"></div>
+<div class="h-32 bg-slate-200 rounded-lg bg-[url('image-78c6e2b1007821611090333276632497')] bg-cover bg-center" data-alt="vibrant ballroom setting with emerald green and gold decorations, group of people posing for a photo"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar content -->
+<div class="lg:col-span-4 space-y-8 min-w-0">
+<!-- Quick Links Widget -->
+<div class="bg-surface-container-high p-8 rounded-xl">
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">Quick Actions</h4>
+<div class="grid grid-cols-1 gap-3">
+<button class="flex items-center gap-3 w-full p-4 bg-white rounded-xl text-emerald-900 font-bold text-sm shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-secondary">badge</span>
+                                Update Profile
+                            </button>
+<button class="flex items-center gap-3 w-full p-4 bg-white rounded-xl text-emerald-900 font-bold text-sm shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-secondary">psychology</span>
+                                Find a Mentor
+                            </button>
+<button class="flex items-center gap-3 w-full p-4 bg-white rounded-xl text-emerald-900 font-bold text-sm shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-secondary">post_add</span>
+                                Post a Job
+                            </button>
+</div>
+</div>
+<!-- Mini Map Widget -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.04)] overflow-hidden">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-sm font-bold text-emerald-900">Alumni Map</h4>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Global Hub</span>
+</div>
+<div class="h-40 bg-slate-100 rounded-xl relative overflow-hidden">
+<!-- Visual representation of a map with markers -->
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="stylized minimalist world map in soft cream and teal colors showing dots representing alumni locations globally" data-location="Enugu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBbbFRCa2lEM1LkcmtineYvCZWV57cVC43aYxoMHoxpYne3GSj6ZslDcj0BLYCrLTQ5AAzFdX-1PNBALdK2nxin9PTEqy4Lf52Jf7xc_OzZQnpeAxRWUElpbpQgBZ9qixZjCFaAKjleCTJYpsHLPnCjXbMlEP2HWYUYqb934Owjre1Mi90wR2KH_WyQPFYxXrfQVbcOZVsqaUTQ6V6WnCrXbBrcx8QzJzeFgbPbeaRDlVLzhZ3FNoOQsZvMOWIlqEte_KFoLo-NVlj"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-3 h-3 bg-primary rounded-full animate-ping"></div>
+<div class="w-2 h-2 bg-primary rounded-full absolute"></div>
+</div>
+</div>
+<p class="text-xs text-slate-500 mt-4 font-medium">84 classmates are currently in Lagos. <span class="text-primary font-bold cursor-pointer">Explore →</span></p>
+</div>
+<!-- Donation Widget -->
+<div class="bg-gradient-to-br from-tertiary to-slate-900 p-8 rounded-xl text-white">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary-container">favorite</span>
+<h4 class="text-sm font-bold">Lions Endowment</h4>
+</div>
+<p class="text-2xl font-black mb-1" id="dashboard-donation-total">$120,400</p>
+<p class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-6" id="dashboard-donation-meta">Total Raised This Month</p>
+<button class="w-full py-3 bg-secondary-container text-on-secondary-container rounded-lg font-black text-xs uppercase tracking-widest hover:scale-105 transition-transform">
+                            Contribute
+                        </button>
+</div>
+</div>
+<!-- Career Hub -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.04)] min-w-0">
+<h3 class="text-xl font-bold text-emerald-900 tracking-tight mb-6">Career Hub</h3>
+<div class="space-y-6" id="member-career-list">
+</div>
+<button class="w-full mt-8 py-3 text-emerald-900 font-bold text-xs uppercase tracking-widest bg-surface-container hover:bg-surface-container-high rounded-xl transition-colors">
+                        Browse all 42 jobs
+                    </button>
+</div>
+<!-- Mentorship Hub -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.04)] min-w-0">
+<h3 class="text-xl font-bold text-emerald-900 tracking-tight mb-6">Mentorship Hub</h3>
+<div class="space-y-6" id="member-mentor-list">
+</div>
+<button onclick="window.location.href='mentors.html'" class="w-full mt-8 py-3 text-emerald-900 font-bold text-xs uppercase tracking-widest bg-surface-container hover:bg-surface-container-high rounded-xl transition-colors">
+                        Find Your Guide
+                    </button>
+</div>
+<!-- Upcoming Events -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.04)] min-w-0">
+<h3 class="text-xl font-bold text-emerald-900 tracking-tight mb-6">Upcoming Events</h3>
+<div class="space-y-6">
+<div class="flex gap-4 items-center">
+<div class="flex-shrink-0 w-12 h-14 bg-surface-container rounded-lg flex flex-col items-center justify-center border-b-2 border-secondary">
+<span class="text-[10px] font-bold uppercase text-slate-500">JUN</span>
+<span class="text-xl font-black text-emerald-900">15</span>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-bold text-emerald-900">Tech Lions Networking Night</h5>
+<p class="text-xs text-slate-500">Lagos Oriental Hotel • 18:00 WAT</p>
+</div>
+<button class="p-2 text-primary hover:bg-primary-fixed rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">calendar_add_on</span>
+</button>
+</div>
+<div class="flex gap-4 items-center pt-6 border-t border-slate-50">
+<div class="flex-shrink-0 w-12 h-14 bg-surface-container rounded-lg flex flex-col items-center justify-center border-b-2 border-secondary">
+<span class="text-[10px] font-bold uppercase text-slate-500">JUL</span>
+<span class="text-xl font-black text-emerald-900">02</span>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-bold text-emerald-900">Professional Mentorship Workshop</h5>
+<p class="text-xs text-slate-500">Virtual (Zoom) • 14:00 WAT</p>
+</div>
+<button class="p-2 text-primary hover:bg-primary-fixed rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">calendar_add_on</span>
+</button>
+</div>
+<div class="flex gap-4 items-center pt-6 border-t border-slate-50">
+<div class="flex-shrink-0 w-12 h-14 bg-surface-container rounded-lg flex flex-col items-center justify-center border-b-2 border-secondary">
+<span class="text-[10px] font-bold uppercase text-slate-500">AUG</span>
+<span class="text-xl font-black text-emerald-900">22</span>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-bold text-emerald-900">Annual General Meeting 2024</h5>
+<p class="text-xs text-slate-500">UNN Campus, Nsukka • 10:00 WAT</p>
+</div>
+<button class="p-2 text-primary hover:bg-primary-fixed rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">calendar_add_on</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Anchor -->
+<footer class="w-full py-12 mt-auto bg-[#1c2f40] dark:bg-slate-950 flex flex-col md:flex-row justify-between items-center px-12 gap-6">
+<div class="text-slate-400 font-inter text-xs tracking-widest uppercase">
+                © 2024 UNNSS Alumni Association. All Rights Reserved.
+            </div>
+<div class="flex gap-8">
+<a class="text-slate-400 font-inter text-xs tracking-widest uppercase hover:text-emerald-400 transition-colors" href="contact.html#privacy">Privacy Policy</a>
+<a class="text-slate-400 font-inter text-xs tracking-widest uppercase hover:text-emerald-400 transition-colors" href="contact.html#terms">Terms of Service</a>
+<a class="text-slate-400 font-inter text-xs tracking-widest uppercase hover:text-emerald-400 transition-colors" href="contact.html">Contact Support</a>
+</div>
+</footer>
+</div>
+<script src="app.js"></script>
+<script>
+    document.getElementById('open-member-sidebar')?.addEventListener('click', () => {
+        document.getElementById('member-sidebar').classList.add('sidebar-open');
+    });
+    document.getElementById('close-member-sidebar')?.addEventListener('click', () => {
+        document.getElementById('member-sidebar').classList.remove('sidebar-open');
+    });
+</script>
+<script src="api-client.js"></script>
+<script src="member-dashboard.js"></script>
+</body></html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | UNNSSAA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="site-responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#00201a",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#36485b",
+                    "surface-dim": "#dcd9d9",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-container": "#334557",
+                    "secondary": "#735c00",
+                    "on-tertiary-container": "#9fb2c8",
+                    "on-primary-container": "#7ebdac",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f0edec",
+                    "on-tertiary-fixed": "#091d2e",
+                    "tertiary": "#1c2f40",
+                    "primary-fixed-dim": "#94d3c1",
+                    "outline-variant": "#bfc9c4",
+                    "primary-container": "#004d40",
+                    "secondary-fixed": "#ffe088",
+                    "on-surface-variant": "#3f4945",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-tint": "#29695b",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#afefdd",
+                    "outline": "#707975",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary-fixed-variant": "#065043",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#94d3c1",
+                    "on-background": "#1c1b1b",
+                    "on-secondary-container": "#745c00",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container-high": "#ebe7e7",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#b5c8df",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-container": "#fed65b",
+                    "on-secondary-fixed-variant": "#574500",
+                    "background": "#fcf9f8",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#d1e4fb",
+                    "primary": "#00342b",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>body {
+    font-family: "Inter", sans-serif
+    }
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.bg-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuD9S645IKRWuIiDF335r2Uzfjr6QwOVfUouxzN2bHlkYEqk_fxLValbW_Zvxv9qgBPk9Gckdk9_Y-oxlEMn9X_DGCjABhIINUfwzKMTRthkENmukSpHnTE1tVRS0zwX-mTYk3Krt7hE4Qs7BY-ZiCLSXWTnJoie6cSzEjtCamB5nzBBXnRd_9Id_Lr0zRCFY2OSlzyUGPsQWP4CH25uQgGCWOsKEvcLGR_u6na12renLY9I3UXzOW1yEAWM2IjFmXXAvCyMA07CeNFo);
+    background-size: cover;
+    background-position: center
+    }</style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar (Simplified per Task) -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#fcf9f8]/10 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 md:px-10 py-5 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-extrabold text-white tracking-[-0.04em]">
+                UNNSSAA
+            </div>
+<a class="group flex items-center gap-2 text-white/90 hover:text-white transition-all duration-300 font-medium" href="home.html">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+<span class="text-sm tracking-wide">Back to Home</span>
+</a>
+</div>
+</nav>
+<!-- Main Cinematic Layout -->
+<main class="relative flex-grow flex items-center justify-center pt-24 pb-12 px-4 bg-hero" data-alt="Cinematic wide shot of the University of Nigeria Nsukka gateway and administrative buildings under a serene twilight sky with warm interior lights glowing.">
+<div class="w-full max-w-md">
+<!-- Login Card -->
+<div class="glass-card rounded-xl p-8 md:p-10 shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-fade-in">
+<div class="text-center mb-8">
+<h1 class="text-3xl font-extrabold text-white tracking-tight mb-2">Welcome Back, Lion</h1>
+<p class="text-surface-container-low/80 text-sm leading-relaxed">
+                        Access your global alumni network and resources.
+                    </p>
+</div>
+<form action="#" class="space-y-6" id="login-form">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block text-[0.75rem] font-bold text-white/70 uppercase tracking-widest ml-1">Email Address</label>
+<div class="relative">
+<input class="w-full bg-white/10 border-0 rounded-xl px-4 py-3.5 text-white placeholder:text-white/30 focus:ring-2 focus:ring-secondary/50 transition-all outline-none" id="login-email" placeholder="lion@alumni.unn.edu" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="text-[0.75rem] font-bold text-white/70 uppercase tracking-widest">Password</label>
+<a class="text-[0.7rem] font-semibold text-secondary-fixed hover:text-secondary transition-colors uppercase tracking-wider" href="contact.html">Forgot Password?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-white/10 border-0 rounded-xl px-4 py-3.5 text-white placeholder:text-white/30 focus:ring-2 focus:ring-secondary/50 transition-all outline-none" id="login-password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-secondary text-white font-bold py-4 rounded-xl shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 ease-out mt-4" id="login-submit" type="submit">
+                        Login
+                    </button>
+<p class="hidden text-red-200 text-sm" id="login-error"></p>
+</form>
+<!-- Divider -->
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-white/10"></div>
+</div>
+<div class="relative flex justify-center text-xs">
+<span class="px-3 bg-transparent text-white/40 uppercase tracking-widest font-medium">Professional Sign-in</span>
+</div>
+</div>
+<!-- Social Login -->
+<div class="flex gap-4">
+<button class="flex-1 flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white/90 py-3 rounded-xl transition-all duration-200 border border-white/10">
+<img alt="LinkedIn logo" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC71waa6Tya43pi6Pmt95mfuqa9qQnOcwgqxVw30Vyrnk1Vau3wH0XFlEeiyR2meZBavZmLFunQ6DstItqCtMRzNS5o0QRkJBFPYuYwdMhZC209Qpse80Y4AW0BZ78UyYroAtZcNrJM4sJB2OETCql8quQMdCCFRRkIuGGgSK1aqvh3JyOn57JElFmzop1QGCDD2pMh8rly-QzKJejNkeJZ7MOUEdK0BxveyrdxUCFe4d8-beyWzf6No-Wpd3vKATr1xv4j1ue-Oi5K"/>
+<span class="text-sm font-medium">LinkedIn</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white/90 py-3 rounded-xl transition-all duration-200 border border-white/10">
+<img alt="Google logo" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM4bCWuLA_QvwlG-DLXkL3BcczoPDkER5VZorzl070R8wPwSInA1Q3muNGRVkQJBVyjceGMFicTObjCCk9Baw5RzVTS-k2dUAijly0CK2IyZWI45QEJ-1s7PatcK7j2KJso-J0lOOsy5bnqcqhOxizQo9eUVfKjsgmVeA9Vu-hfoj7AHtq4V45G_lI9He0g3C7zqwFpCYUcANgCj25cm-AfJTuLtURF-RDcoWRzT-YBZSHkVaKKuJbMEh4eIy2Mp0f7hLhCEqIYz1F"/>
+<span class="text-sm font-medium">Google</span>
+</button>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="mt-8 text-center">
+<p class="text-white/80 font-medium">
+                    Not part of the pride yet? 
+                    <a class="text-secondary-fixed hover:text-secondary-fixed-dim underline underline-offset-4 ml-1 transition-colors" href="about.html">Join the Network</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer (Simplified per Task) -->
+<footer class="bg-tertiary w-full rounded-t-[2rem] py-12 px-10">
+<div class="max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<div class="text-xl font-bold text-white tracking-tighter mb-2">UNNSSAA</div>
+<p class="text-slate-400 text-sm leading-relaxed max-w-md">
+                    © 2024 University of Nigeria Nsukka Secondary School Alumni Association. Preserving Heritage, Engineering the Future.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-400 hover:text-white text-sm transition-colors duration-200" href="alumni_directory.html">Directory</a>
+<a class="text-slate-400 hover:text-white text-sm transition-colors duration-200" href="admin_dashboard.html">Admin Portal</a>
+<a class="text-slate-400 hover:text-white text-sm transition-colors duration-200" href="contact.html#privacy">Privacy Policy</a>
+<a class="text-slate-400 hover:text-white text-sm transition-colors duration-200" href="contact.html#terms">Terms of Service</a>
+<a class="text-slate-400 hover:text-white text-sm transition-colors duration-200" href="contact.html">Help Center</a>
+</div>
+</div>
+</footer>
+<script src="app.js"></script>
+<script src="api-client.js"></script>
+<script src="login.js"></script>
+</body></html>

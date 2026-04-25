@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Welcome to the University of Nigeria Nsukka Secondary School Alumni Association (UNNSSAA). Connect, network, and grow with generations of Lions worldwide.">
+<title>UNNSSAA | Building Lifelong Connections</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="site-responsive.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#745c00",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary": "#ffffff",
+              "primary": "#004d40",
+              "surface-bright": "#fcf9f8",
+              "surface-tint": "#29695b",
+              "secondary-fixed-dim": "#e9c349",
+              "inverse-on-surface": "#f3f0ef",
+              "tertiary-fixed-dim": "#b5c8df",
+              "primary-container": "#004d40",
+              "on-tertiary-fixed-variant": "#36485b",
+              "background": "#fcf9f8",
+              "on-secondary-fixed-variant": "#574500",
+              "tertiary-container": "#334557",
+              "secondary-fixed": "#ffe088",
+              "on-tertiary-fixed": "#091d2e",
+              "on-surface-variant": "#3f4945",
+              "on-primary-fixed": "#00201a",
+              "tertiary-fixed": "#d1e4fb",
+              "surface-container-highest": "#e5e2e1",
+              "on-tertiary-container": "#9fb2c8",
+              "outline-variant": "#bfc9c4",
+              "secondary": "#735c00",
+              "surface-dim": "#dcd9d9",
+              "on-error": "#ffffff",
+              "primary-fixed": "#afefdd",
+              "surface-container": "#f0edec",
+              "on-error-container": "#93000a",
+              "surface": "#fcf9f8",
+              "error": "#ba1a1a",
+              "outline": "#707975",
+              "inverse-surface": "#313030",
+              "on-background": "#1c1b1b",
+              "on-primary-container": "#7ebdac",
+              "on-primary-fixed-variant": "#065043",
+              "inverse-primary": "#94d3c1",
+              "on-secondary-fixed": "#241a00",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e5e2e1",
+              "surface-container-high": "#ebe7e7",
+              "tertiary": "#1c2f40",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "primary-fixed-dim": "#94d3c1",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fed65b"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "xxl": "1.5rem", "full": "9999px"},
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .glass-panel {
+        background: rgba(252, 249, 248, 0.7);
+        backdrop-filter: blur(24px);
+      }
+      .glass-dark {
+        background: rgba(0, 77, 64, 0.15);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+      .map-dot {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: #735c00;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .map-dot::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        border-radius: 50%;
+        animation: map-pulse 2s infinite;
+      }
+      @keyframes map-pulse {
+        0% { transform: scale(1); opacity: 0.8; }
+        100% { transform: scale(3.5); opacity: 0; }
+      }
+      .topo-bg {
+        background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 380c20 0 20-20 40-20s20 20 40 20 20-20 40-20 20 20 40 20 20-20 40-20 20 20 40 20 20-20 40-20 20 20 40 20M0 340c20 0 20-20 40-20s20 20 40 20 20-20 40-20 20 20 40 20 20-20 40-20 20 20 40 20 20-20 40-20 20 20 40 20M0 300c20 0 20-20 40-20s20 20 40 20 20-20 40-20 20 20 40 20 20-20 40-20 20 20 40 20 20-20 40-20 20 20 40 20' stroke='%23004d40' stroke-opacity='0.05' fill='none'/%3E%3C/svg%3E");
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased topo-bg">
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-emerald-900 dark:text-white uppercase">UNNSSAA</div>
+<div class="hidden md:flex gap-8 items-center font-sans antialiased text-sm font-medium tracking-tight">
+<a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-amber-500 pb-1" href="home.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="about.html">About</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="alumni_directory.html">Directory</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="events.html">Events</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="news.html">Stories</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="giveback.html">Give Back</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="text-stone-600 dark:text-stone-400 text-sm font-medium hover:opacity-80 transition-all duration-300 ease-out">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-bold scale-95 active:scale-90 transition-transform">Contact</button>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-transparent z-10"></div>
+<img alt="Academic campus" class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7jpsqFkHQKodbzgSTmyNZ2J4IrihuOWrkQqgoCVNU3WFGpiTLttT69gChaOPIlqDsMIs8i3pDD1UtJ6BQpkDOxF87rPX2C5OgLeVfIMHvqXNNjMl-EG5lyfG09tWwiKLC2c_T2nNKoOmNVpOYzwlg0KpqrVY5JFkQz1QCBnQK13oVEhePIIr56lddrdyfRNmkJoPg532QOcDzEfJbpZCqbGS8nOKlvnAsB2aAFnIxDxpxu8POftz9cSYIl-1ZfguiInw5CWQcqEOy"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-8 py-24">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary text-on-secondary text-[0.75rem] font-bold tracking-[0.1em] uppercase mb-6">Established 1960</span>
+<h1 class="text-[4rem] font-extrabold leading-[1] tracking-[-0.04em] text-white mb-8">
+                        Building Lifelong Connections, Inspiring Future Generations
+                    </h1>
+<p class="text-xl text-white/90 mb-10 leading-relaxed font-light">
+                        Welcome to the official alumni network of the University of Nigeria Nsukka Secondary School. A bridge between our prestigious heritage and your dynamic future.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-bold hover:translate-y-[-2px] transition-all shadow-xl">Join the Network</button>
+<button class="glass-panel text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">Explore Alumni Directory</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 1. Global Alumni Footprint (Trust Bar) -->
+<section class="py-12 bg-white border-b border-surface-container-highest">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<p class="text-xs font-bold tracking-[0.2em] text-outline uppercase mb-8">Our Alumni Lead at Global Organizations</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Google" class="h-6 md:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChZAulz3ZAIJS8ulO-JAVXWdKqlfEKN9bagpnb1Vi5cNqoOcaem0KKHG91ZobhCOgsiGwmRpnXn402F3wuUS6lM9ll9eXaZ301tIBw7Qp0yehoFUCT7YPOOJOfqe0O-cftJIPi1MMTjRzJ2S5mA2W22clm3jvB0xqlPzoTVZLO7wERSeWVbf7vVPTq3HBYd7ygxFQyrGD9xwlNsBp_QmqH-Iks1EPtlgXSjEHHlcaon8DLORGIodstObJhSp3-dFPiDhu_8-qq4ZQU"/>
+<img alt="IBM" class="h-6 md:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2M98-isPhYK4hTAdGEOA2qvwJ8ME8Vuk-3Qiz3bV0RjdhWxU0Gvqnv4dUdJyS0bVY5QYT8auWFdY2lZ-AO957bZ06KmDcsXVwq55XSOVgGFQznXCtctbWafvXAgDrepS_0KFO4alQRGsF_4HuEOtT_DXemE25RJHyFjoye45a_9MbC516lyOuLX0dtxc0d1P6yDebjiVrn6ekvWKFIiq8c72UdXO17gsd-D1bDv3Dulb209h3-NAkhr1DgzSz2qUKBuMAW-8kiAlC"/>
+<img alt="Microsoft" class="h-6 md:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOxT_hc4dnZEYMswp3VSYLo4orHtt7oH6O-l24sjibCFRa56IZDatyUwn3_N-SCInTWyb5_iZ7Y-kLShi2638lANrRZ5UfbrF73uYTBUoRvcDb506HCiYXRNcECK6Z-k1fQtkS6YfuXG0ZM4ZhzAiIyaMR_mxspN5MGbVDHm6Jw-GYCHfD5ITGGJrxo6FBSx2oqvfAAQPlMGdFUMvsyIrKLFeEFNkrCMZXZB95w0p7cFbueQu2sj4FkStRgU9f9iK42wfVn3urLmRd"/>
+<img alt="United Nations" class="h-10 md:h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7aEs-Hcyvhh5fqfDNwzy4dW7jt329NvA2G8Df910JuCRoylixqRnhGbpjz1SJKbjuFfhe2noFenIh7cGdWf77YgsnfEl4WiLhx2ml6nQgMc_iuCNBa5kxJ9wrrLwu_U-uSN4osuQvSLPWxLiDy-tjYuTEZhKqDjTE1CTENu0XGGxZPZ8FzlYTz5IC1X7GWtAgL8qTAVfxngZItf9nonSlRjBZc10E_wje3xL_9S31b9NEjI_JkOX99ebEnokJnurzvXvEfK2LiCXc"/>
+<img alt="Netflix" class="h-6 md:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKPZzUCvKQMNTvMb7FdacOhzZnCZommRWg9VMDw1aaV24ASGwi8YBh6dS-O4Rl6f3r_vRKOpKJ-mv0QISsZfveY9LUQGZENGlOm8RaJ4jNLiZvBckJfkrx6g9g-JmqqWuTRdLe1zIIWnhKzDPcbytXXXV7DqAGQ-GW9iGejzxJLfgxU2eRVl0Gi3YvfSHuK69weabIJ6OoWrw6xG-RYAWr9VRqcCP98kl3DK0XTm9h2DuM6GUsY8ecxZKEIefM_iebPCN7VZs7zBNj"/>
+<img alt="Meta" class="h-6 md:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhsimFxxzPQyrNZsNGm8MNFUToIJBfAV4kh7gqFbur97hS8e45LzA_bhWRIaGcqG-PdJ_CRjydNlEjzOpF9yqTu1xnAa_2erzzkotIQxcfnEYGv4Q0mdDuWasR4VjgoeEIrzZSvp32bmCZ_Aho1bM0Krm1_7vfwtpLMuKOVDVsz_6BTdItb-yzqN9BYVJMZXbXzrHIInhhcn7YElbITpVbzDljgvksd3X3dUeC7AveXM9lufvgOTIQ2Ya-mUFVuWpXIDWSzzZ9eHvB"/>
+</div>
+</div>
+</section>
+<!-- 2. Impact by the Numbers -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="glass-panel p-10 rounded-xxl shadow-sm border border-white/40 group hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="text-4xl font-extrabold text-primary mb-2 tracking-tighter">12,000+</div>
+<div class="text-xs font-bold text-secondary uppercase tracking-widest">Global Alumni</div>
+<p class="mt-4 text-sm text-on-surface-variant">Vibrant community spanning over 6 decades of excellence.</p>
+</div>
+<div class="glass-panel p-10 rounded-xxl shadow-sm border border-white/40 group hover:shadow-xl transition-all duration-500 hover:-translate-y-2 lg:translate-y-8">
+<div class="text-4xl font-extrabold text-primary mb-2 tracking-tighter">45+</div>
+<div class="text-xs font-bold text-secondary uppercase tracking-widest">Countries</div>
+<p class="mt-4 text-sm text-on-surface-variant">Lions making impact from Lagos to London, New York to Tokyo.</p>
+</div>
+<div class="glass-panel p-10 rounded-xxl shadow-sm border border-white/40 group hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="text-4xl font-extrabold text-primary mb-2 tracking-tighter">₦50M+</div>
+<div class="text-xs font-bold text-secondary uppercase tracking-widest">Scholarships</div>
+<p class="mt-4 text-sm text-on-surface-variant">Investing in the next generation of academic leaders.</p>
+</div>
+<div class="glass-panel p-10 rounded-xxl shadow-sm border border-white/40 group hover:shadow-xl transition-all duration-500 hover:-translate-y-2 lg:translate-y-8">
+<div class="text-4xl font-extrabold text-primary mb-2 tracking-tighter">500+</div>
+<div class="text-xs font-bold text-secondary uppercase tracking-widest">Active Mentors</div>
+<p class="mt-4 text-sm text-on-surface-variant">Dedicated professionals guiding young alumni careers.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Search Directory Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-4">Find Your Classmates</h2>
+<p class="text-[1.75rem] font-semibold tracking-[-0.01em] text-primary">Connect with peers across the globe.</p>
+</div>
+</div>
+<div class="bg-surface-container rounded-xxl p-8 md:p-12 shadow-sm relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="space-y-2">
+<label class="text-[0.75rem] font-bold tracking-[0.1em] uppercase text-outline">Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 py-3" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[0.75rem] font-bold tracking-[0.1em] uppercase text-outline">Graduation Year</label>
+<select class="w-full bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 py-3">
+<option>Select Year</option>
+<option>2023</option>
+<option>2020</option>
+<option>2015</option>
+<option>2010</option>
+<option>Pre-2000</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[0.75rem] font-bold tracking-[0.1em] uppercase text-outline">Location</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 py-3" placeholder="London, UK" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[0.75rem] font-bold tracking-[0.1em] uppercase text-outline">Profession</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 py-3" placeholder="Software Engineer" type="text"/>
+</div>
+</div>
+<button class="mt-8 w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all">Search Directory</button>
+</div>
+</section>
+<!-- 3. The 'Way of the Lion' (Core Values) -->
+<section class="py-32 bg-primary text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
+<path d="M0,100 Q50,0 100,100" fill="none" stroke="white" stroke-width="0.1"></path>
+<path d="M0,80 Q50,-20 100,80" fill="none" stroke="white" stroke-width="0.1"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="text-center mb-24">
+<h2 class="text-xs font-bold tracking-[0.3em] text-secondary-fixed uppercase mb-4">The Way of the Lion</h2>
+<p class="text-[3rem] font-extrabold tracking-tight mb-6">Our Core Ethos</p>
+<div class="h-1 w-20 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="text-center group">
+<div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-white/20 group-hover:bg-secondary transition-all duration-500">
+<span class="material-symbols-outlined text-4xl">star_outline</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Excellence</h4>
+<p class="text-white/60 leading-relaxed text-sm">A relentless pursuit of quality in all academic and professional endeavors.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-white/20 group-hover:bg-secondary transition-all duration-500">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Integrity</h4>
+<p class="text-white/60 leading-relaxed text-sm">Honesty, accountability, and strong moral principles as our guiding compass.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-white/20 group-hover:bg-secondary transition-all duration-500">
+<span class="material-symbols-outlined text-4xl">groups</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Unity</h4>
+<p class="text-white/60 leading-relaxed text-sm">A lifelong bond that transcends borders, connecting generations of Lions.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-white/20 group-hover:bg-secondary transition-all duration-500">
+<span class="material-symbols-outlined text-4xl">volunteer_activism</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Service</h4>
+<p class="text-white/60 leading-relaxed text-sm">Commitment to giving back to our alma mater and the wider global society.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- History Timeline Section -->
+<section class="py-32 px-8 bg-surface-container-low relative overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-4">Our Heritage</h2>
+<p class="text-[2.5rem] font-extrabold tracking-tight text-primary">A Legacy of Excellence</p>
+</div>
+<div class="relative">
+<!-- Central Line -->
+<div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-primary/20 hidden md:block"></div>
+<div class="space-y-16">
+<!-- 1960 -->
+<div class="relative flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-16 text-right hidden md:block">
+<span class="text-4xl font-extrabold text-primary/10 select-none">1960</span>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-background z-10 hidden md:block"></div>
+<div class="md:w-1/2 md:pl-16">
+<div class="glass-panel p-8 rounded-xxl border border-white/40 shadow-xl hover:-translate-y-1 transition-all duration-300">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase mb-2 block md:hidden">1960</span>
+<h4 class="text-xl font-bold text-primary mb-3">Foundation</h4>
+<p class="text-on-surface-variant leading-relaxed text-sm">Founded as the University of Nigeria Secondary School, establishing a standard for academic brilliance from day one.</p>
+</div>
+</div>
+</div>
+<!-- 1980s -->
+<div class="relative flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-16">
+<div class="glass-panel p-8 rounded-xxl border border-white/40 shadow-xl hover:-translate-y-1 transition-all duration-300 text-left md:text-right">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase mb-2 block md:hidden">1980s</span>
+<h4 class="text-xl font-bold text-primary mb-3">Expansion Era</h4>
+<p class="text-on-surface-variant leading-relaxed text-sm">Rapid expansion and establishment as a premier institution in Nigeria, producing top-tier national leaders.</p>
+</div>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-background z-10 hidden md:block"></div>
+<div class="md:w-1/2 md:pl-16 text-left hidden md:block">
+<span class="text-4xl font-extrabold text-primary/10 select-none">1980s</span>
+</div>
+</div>
+<!-- 2000s -->
+<div class="relative flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-16 text-right hidden md:block">
+<span class="text-4xl font-extrabold text-primary/10 select-none">2000s</span>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-background z-10 hidden md:block"></div>
+<div class="md:w-1/2 md:pl-16">
+<div class="glass-panel p-8 rounded-xxl border border-white/40 shadow-xl hover:-translate-y-1 transition-all duration-300">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase mb-2 block md:hidden">2000s</span>
+<h4 class="text-xl font-bold text-primary mb-3">Digital Transformation</h4>
+<p class="text-on-surface-variant leading-relaxed text-sm">Modernization of facilities and digital transformation to equip students for a technology-driven global landscape.</p>
+</div>
+</div>
+</div>
+<!-- 2024 -->
+<div class="relative flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-16">
+<div class="glass-panel p-8 rounded-xxl border border-white/40 shadow-xl hover:-translate-y-1 transition-all duration-300 text-left md:text-right">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase mb-2 block md:hidden">2024</span>
+<h4 class="text-xl font-bold text-primary mb-3">UNNSSAA Launch</h4>
+<p class="text-on-surface-variant leading-relaxed text-sm">Launch of the global UNNSSAA digital network, connecting Lions across generations and continents.</p>
+</div>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-background z-10 hidden md:block"></div>
+<div class="md:w-1/2 md:pl-16 text-left hidden md:block">
+<span class="text-4xl font-extrabold text-primary/10 select-none">2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Alumni Spotlight Section -->
+<section class="bg-surface-container-lowest py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-4">Alumni Spotlight</h2>
+<p class="text-[1.75rem] font-semibold tracking-[-0.01em] text-primary">Featured Stories</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group bg-surface-container-lowest rounded-xxl overflow-hidden hover:shadow-xl transition-all duration-500">
+<div class="h-64 overflow-hidden">
+<img alt="Dr. Emeka Okafor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqHt75nEZ0CzXNY2opoHejaENPTiUuco0rbKAJP-9Gg6ovFWMKOd7QjVj9Hcf990IeI0nN-YMYNkswmnDQmLKM6KDSoeVYPliwhmg0KYX0Sc_p5TTOLEqpq_dtR6Xzm-RJeFOz9Lh0LyFfLKzAPv3lW3HaX6yXyDCNQbYdm_gJGZu3A06P4wZKApFqC7yB8kCvt4eXgHFxIFAPFY2FEX3q0n2PMxgRppA4QKMHPt9Db2-j8GfLGcPnZjFdAg1Gso2b-NzIQuOfxrpX"/>
+</div>
+<div class="p-8">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-[0.65rem] font-bold rounded-full mb-4">Class of '98</span>
+<h3 class="text-xl font-bold text-primary mb-3">From Nsukka to Global Impact</h3>
+<p class="text-on-surface-variant line-clamp-3 mb-6">Dr. Emeka Okafor shares his journey from the classrooms of UNNSS to leading global health initiatives at the UN.</p>
+<a class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="news.html">
+                                Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xxl overflow-hidden hover:shadow-xl transition-all duration-500 md:translate-y-8">
+<div class="h-64 overflow-hidden">
+<img alt="Chioma Adeyemi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWPyKvOXBdTddtY2_PmloFV8rJ1hFkmQtZ_tArZhAB7Vtc_aejI0pDKwXSE1fPxSIX6-0MjvUy91-bPE55NKJ1izDLllUW35lM7ekUXDy1WYCQyJCW_aDYvR5RlJi4hzid6f4By4vKvq1e3wUDQxBynGIFcMeAmrvT7kF-_KxIm9s-lK4cdhMMGWg9ErqN-Ru0mg8PvRmoSxXhr8TM53fiU18u7SqIU72Efd5WztPwaULuuzOIdnQYXY_pbesoIhI_e7Ajik1dc_9Q"/>
+</div>
+<div class="p-8">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-[0.65rem] font-bold rounded-full mb-4">Class of '05</span>
+<h3 class="text-xl font-bold text-primary mb-3">Tech Innovation in Lagos</h3>
+<p class="text-on-surface-variant line-clamp-3 mb-6">Chioma Adeyemi discusses how her foundational education sparked her passion for sustainable fintech solutions.</p>
+<a class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="news.html">
+                                Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xxl overflow-hidden hover:shadow-xl transition-all duration-500">
+<div class="h-64 overflow-hidden">
+<img alt="Artistic Visions" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMqcc3om93bfbGU3RO-OkerR9Ypj2bFA1WXmtHOzj8yJVEP_kji3QcpXGMKYJnnZd0wNmmnzBTqVDbCNJIf2j5RQpRWwkyYheY-ZM0Z_A4pQw2f4CIMSIzki4saNNzo8gYBf6KqyCTIYDL0lTWYpbx56PLMGbHXAzt6Vgj966Xlmao9cSQXkPrpjHRyGGA74gAtjas78nYcYReEqNQ6_ZLvtqms3wE0FVpTusn-7d0BP9fLhG3ACv3cNIx0CHSdxUA-uBFjrzo32Li"/>
+</div>
+<div class="p-8">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-[0.65rem] font-bold rounded-full mb-4">Class of '12</span>
+<h3 class="text-xl font-bold text-primary mb-3">Artistic Visions Beyond Borders</h3>
+<p class="text-on-surface-variant line-clamp-3 mb-6">How the creative culture at UNNSS paved the way for a career in international film and visual arts.</p>
+<a class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="news.html">
+                                Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Member Testimonials -->
+<section class="py-32 px-8 bg-white overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-4">Voice of the Pride</h2>
+<p class="text-[2.5rem] font-extrabold tracking-tight text-primary">Member Testimonials</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="glass-panel p-12 rounded-xxl border border-surface-container-high relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-8 right-8">format_quote</span>
+<div class="flex items-center gap-6 mb-8">
+<img alt="Alumnus" class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMqcc3om93bfbGU3RO-OkerR9Ypj2bFA1WXmtHOzj8yJVEP_kji3QcpXGMKYJnnZd0wNmmnzBTqVDbCNJIf2j5RQpRWwkyYheY-ZM0Z_A4pQw2f4CIMSIzki4saNNzo8gYBf6KqyCTIYDL0lTWYpbx56PLMGbHXAzt6Vgj966Xlmao9cSQXkPrpjHRyGGA74gAtjas78nYcYReEqNQ6_ZLvtqms3wE0FVpTusn-7d0BP9fLhG3ACv3cNIx0CHSdxUA-uBFjrzo32Li"/>
+<div>
+<h4 class="font-bold text-primary">Dr. Amaka Eze</h4>
+<p class="text-xs text-secondary font-bold uppercase tracking-widest">Class of '92 • Neurosurgeon</p>
+</div>
+</div>
+<p class="text-lg text-on-surface-variant italic leading-relaxed">"The foundation laid at UNNSS was not just academic; it was about building character and resilience. Reconnecting through the alumni association has been one of the most rewarding experiences of my professional life."</p>
+</div>
+<div class="glass-panel p-12 rounded-xxl border border-surface-container-high relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-8 right-8">format_quote</span>
+<div class="flex items-center gap-6 mb-8">
+<img alt="Alumnus" class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqHt75nEZ0CzXNY2opoHejaENPTiUuco0rbKAJP-9Gg6ovFWMKOd7QjVj9Hcf990IeI0nN-YMYNkswmnDQmLKM6KDSoeVYPliwhmg0KYX0Sc_p5TTOLEqpq_dtR6Xzm-RJeFOz9Lh0LyFfLKzAPv3lW3HaX6yXyDCNQbYdm_gJGZu3A06P4wZKApFqC7yB8kCvt4eXgHFxIFAPFY2FEX3q0n2PMxgRppA4QKMHPt9Db2-j8GfLGcPnZjFdAg1Gso2b-NzIQuOfxrpX"/>
+<div>
+<h4 class="font-bold text-primary">Segun Bankole</h4>
+<p class="text-xs text-secondary font-bold uppercase tracking-widest">Class of '08 • Tech Founder</p>
+</div>
+</div>
+<p class="text-lg text-on-surface-variant italic leading-relaxed">"Being a Lion means you have a network for life. I found my first investor and several key hires through this directory. The mentorship I received was pivotal to my startup's success."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Events & Give Back Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto relative overflow-hidden">
+<div class="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-secondary/5 rounded-full blur-3xl animate-pulse-slow"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
+<div>
+<h2 class="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-4">Upcoming Events</h2>
+<p class="text-[1.75rem] font-semibold tracking-[-0.01em] text-primary mb-12">Stay engaged with our community.</p>
+<div class="space-y-6">
+<div class="flex gap-6 p-6 bg-surface-container rounded-xxl hover:bg-surface-container-high transition-colors group">
+<div class="flex-shrink-0 w-16 h-16 bg-primary rounded-xl flex flex-col items-center justify-center text-white group-hover:scale-110 transition-transform">
+<span class="text-lg font-bold">15</span>
+<span class="text-[0.6rem] uppercase tracking-widest">DEC</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-primary">Annual Alumni Reunion</h4>
+<p class="text-on-surface-variant text-sm mb-2">Nsukka Campus • 10:00 AM</p>
+<button class="text-secondary font-bold text-sm">Register Now</button>
+</div>
+</div>
+<div class="flex gap-6 p-6 bg-surface-container rounded-xxl hover:bg-surface-container-high transition-colors group">
+<div class="flex-shrink-0 w-16 h-16 bg-secondary rounded-xl flex flex-col items-center justify-center text-on-secondary group-hover:scale-110 transition-transform">
+<span class="text-lg font-bold">22</span>
+<span class="text-[0.6rem] uppercase tracking-widest">JAN</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-primary">Mentorship Webinar</h4>
+<p class="text-on-surface-variant text-sm mb-2">Zoom Global • 4:00 PM WAT</p>
+<button class="text-secondary font-bold text-sm">Add to Calendar</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary text-on-primary rounded-xxl p-12 relative overflow-hidden group">
+<div class="relative z-10">
+<h2 class="text-xs font-bold tracking-[0.2em] text-secondary-fixed uppercase mb-4">Give Back</h2>
+<h3 class="text-[1.75rem] font-bold leading-tight mb-6">Your Contribution Matters</h3>
+<p class="text-white/70 mb-10 leading-relaxed">Invest in the future of UNNSS. Your donations support infrastructure, scholarships, and special projects.</p>
+<div class="grid grid-cols-2 gap-4 mb-10">
+<button class="bg-white/10 border border-white/20 py-4 rounded-xl font-bold hover:bg-secondary hover:text-on-secondary transition-all">₦10,000</button>
+<button class="bg-white/10 border border-white/20 py-4 rounded-xl font-bold hover:bg-secondary hover:text-on-secondary transition-all">₦50,000</button>
+<button class="bg-white/10 border border-white/20 py-4 rounded-xl font-bold hover:bg-secondary hover:text-on-secondary transition-all">₦100,000</button>
+<button class="bg-white/10 border border-white/20 py-4 rounded-xl font-bold hover:bg-secondary hover:text-on-secondary transition-all">Custom</button>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-5 rounded-xl font-extrabold text-lg shadow-2xl hover:scale-[1.02] transition-transform">Donate Now</button>
+</div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary/20 rounded-full blur-3xl transition-transform duration-700 group-hover:scale-125"></div>
+</div>
+</div>
+</section>
+<!-- Where are they now? Section -->
+<section class="py-32 bg-white relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h2 class="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-4">Where are they now?</h2>
+<p class="text-[2.5rem] font-extrabold tracking-tight text-primary leading-tight mb-6">Our Global Footprint</p>
+<p class="text-on-surface-variant leading-relaxed">From the historic gates of Nsukka, the Lions have ventured across continents, leading industries and shaping the global future. Our network spans every corner of the globe.</p>
+</div>
+<div class="relative w-full aspect-[21/9] bg-surface-container-low rounded-xxl overflow-hidden shadow-inner border border-outline-variant/30">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-40">
+<svg class="w-full h-full text-primary/10 fill-current" viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+<path d="M150,150 Q200,100 250,150 T350,150 T450,100 T550,150 T650,200 T750,150 T850,250 T950,150" fill="none" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></path>
+<circle cx="200" cy="180" opacity="0.05" r="100"></circle>
+<circle cx="500" cy="250" opacity="0.05" r="150"></circle>
+<circle cx="800" cy="200" opacity="0.05" r="120"></circle>
+</svg>
+</div>
+<div class="map-dot top-[60%] left-[48%] group cursor-pointer" title="Nsukka / Lagos">
+<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-primary text-white text-[0.65rem] font-bold rounded-lg whitespace-nowrap z-50">West Africa Hub</div>
+</div>
+<div class="map-dot top-[35%] left-[47%] group cursor-pointer" title="London">
+<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-primary text-white text-[0.65rem] font-bold rounded-lg whitespace-nowrap z-50">London Chapter</div>
+</div>
+<div class="map-dot top-[38%] left-[28%] group cursor-pointer" title="New York">
+<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-primary text-white text-[0.65rem] font-bold rounded-lg whitespace-nowrap z-50">USA - East Coast</div>
+</div>
+<div class="map-dot top-[45%] left-[22%] group cursor-pointer" title="Houston">
+<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-primary text-white text-[0.65rem] font-bold rounded-lg whitespace-nowrap z-50">USA - South</div>
+</div>
+<div class="map-dot top-[32%] left-[25%] group cursor-pointer" title="Toronto">
+<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-primary text-white text-[0.65rem] font-bold rounded-lg whitespace-nowrap z-50">Canada - Toronto</div>
+</div>
+<div class="absolute bottom-8 left-8 glass-panel border border-white/30 p-8 rounded-xxl shadow-2xl max-w-xs">
+<div class="space-y-6">
+<div>
+<p class="text-3xl font-extrabold text-primary tracking-tight">12,000+</p>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest">Alumni Worldwide</p>
+</div>
+<div class="h-px bg-outline-variant/30 w-full"></div>
+<div>
+<p class="text-3xl font-extrabold text-primary tracking-tight">45+</p>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest">Countries Represented</p>
+</div>
+</div>
+</div>
+<div class="absolute top-8 right-8">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-sm">public</span>
+                            View Interactive Map
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Section -->
+<section class="py-24 bg-tertiary text-white text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-8 relative z-10">
+<h2 class="text-3xl font-bold mb-10 tracking-tight">Stay Connected On Social</h2>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="flex items-center gap-3 bg-white/5 border border-white/10 px-8 py-4 rounded-full hover:bg-white/10 transition-all hover:scale-105" href="mentors.html">
+<span class="material-symbols-outlined">model_training</span> Mentorship Network
+                    </a>
+<a class="flex items-center gap-3 bg-[#0077b5] px-8 py-4 rounded-full hover:opacity-90 transition-all hover:scale-105" href="alumni_directory.html">
+                        LinkedIn Community
+                    </a>
+<a class="flex items-center gap-3 bg-[#25d366] px-8 py-4 rounded-full hover:opacity-90 transition-all hover:scale-105" href="events.html">
+                        WhatsApp Class Groups
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-stone-900 dark:bg-black text-stone-400 text-sm leading-relaxed w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-bold text-white tracking-widest uppercase">UNNSSAA</div>
+<p class="text-stone-500">Connecting generations of excellence. From our historic campus to global leadership.</p>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="alumni_directory.html">Directory</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="events.html">Events</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="careers.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Network</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="alumni_directory.html">Chapter Locations</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="mentors.html">Mentorship</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="giveback.html">Give Back</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="contact.html#privacy">Privacy Policy</a></li>
+<li><a class="text-stone-500 hover:text-amber-500 transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="contact.html#terms">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-stone-800 py-8 px-12 text-center text-xs text-stone-600">
+            © 2024 UNNSSAA. Heritage &amp; Future.
+        </div>
+</footer>
+<script src="app.js"></script>
+</body></html>
